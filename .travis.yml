@@ -5,6 +5,8 @@ services:
 
 before_install:
   - docker-compose up -d
+  - CURRENT_RASPBIAN_FILE=$(curl http://downloads.raspberrypi.org/raspbian_lite/images/${CURRENT_RASPBIAN}/ | grep .zip | head -n 1 | awk -F "href=\"" '{print $2}' | awk -F "\">" '{print $1}')
+  - curl -L -o "src/image/${CURRENT_RASPBIAN_FILE}" https://downloads.raspberrypi.org/raspbian_lite/images/${CURRENT_RASPBIAN}/${CURRENT_RASPBIAN_FILE}
 
 script:
   - docker exec -it mydistro-build build

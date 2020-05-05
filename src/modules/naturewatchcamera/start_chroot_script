@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+# My Naturewatch Camera Builder
+# Builds NaturewatchCameraServer and dependencies
+# Written by Mike Vanis
+# GPL V3
+########
+
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/home/root /root root
+unpack /filesystem/boot /boot
+
+echo "-----------------------------------------"
+echo "$NATUREWATCHCAMERA_VAR"
+
+apt-get update
+apt-get install -y git
+echo "Installing OpenCV dependencies"
+apt-get install -y libavutil56 libcairo-gobject2 libgtk-3-0 libpango-1.0-0 libavcodec58 libcairo2 libswscale5 libtiff5 libatk1.0-0 libavformat58 libgdk-pixbuf2.0-0 libilmbase23 libjasper1 libopenexr23 libpangocairo-1.0-0 libwebp6 libatlas-base-dev liblapack-dev
+apt-get install -y python3-dev
+apt-get install -y gpac
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
+rm -rf ~/.cache/pip
+pip3 install --upgrade pip
+echo "[global]" >> /etc/pip.conf
+echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
+
+echo "Installing OpenCV"
+pip3 install opencv-python-headless==4.1.0.25
+
+pushd /home/pi
+	echo "Checking out repo"
+	git clone https://github.com/interactionresearchstudio/NaturewatchCameraServer.git
+
+	pushd NaturewatchCameraServer
+
+		echo "Installing repo dependencies"
+		pip3 install -r requirements-pi.txt
+
+		echo "Adding service"
+		mv helpers/python.naturewatch.service /etc/systemd/system/python.naturewatch.service
+
+	popd
+popd
+
+echo "Enabling service"
+chmod 644 /etc/systemd/system/python.naturewatch.service
+systemctl enable python.naturewatch.service
+
+rm get-pip.py 
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+# Unpack root at the end, so files are modified before
+unpack /filesystem/root /

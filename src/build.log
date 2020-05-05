@@ -1,0 +1,2726 @@
+++++ realpath -s /CustomPiOS/build
++++ dirname /CustomPiOS/build
+++ BUILD_SCRIPT_PATH=/CustomPiOS
+++ source /CustomPiOS/common.sh
+++ install_cleanup_trap
+++ set -e
+++ trap cleanup SIGINT SIGTERM
+++++ realpath -s /CustomPiOS/build
++++ dirname /CustomPiOS/build
+++ CUSTOM_OS_PATH=/CustomPiOS
+++ pushd /CustomPiOS
+/CustomPiOS /distro
++++ git rev-parse HEAD
+fatal: not a git repository (or any of the parent directories): .git
+++ export OCTOPI_COMMIT=
+++ OCTOPI_COMMIT=
+++ popd
+/distro
+++ source /CustomPiOS/config
++++++ realpath -s /CustomPiOS/config
+++++ dirname /CustomPiOS/config
++++ CONFIG_DIR=/CustomPiOS
++++ export BUILD_VARIANT=default
++++ BUILD_VARIANT=default
++++ BUILD_FLAVOR=default
++++ WORKSPACE_POSTFIX=
++++ '[' 0 -gt 0 ']'
++++ '[' 0 -gt 1 ']'
++++ echo -e '--> Building VARIANT default, FLAVOR default'
+--> Building VARIANT default, FLAVOR default
++++ '[' -f /CustomPiOS/config.local ']'
++++ source /distro/config
+++++ export DIST_NAME=MyNaturewatchCamera
+++++ DIST_NAME=MyNaturewatchCamera
+++++ export DIST_VERSION=1.0b
+++++ DIST_VERSION=1.0b
+++++ export 'MODULES=base(network,disable-services(auto-hotspot,raspicam,naturewatchcamera))'
+++++ MODULES='base(network,disable-services(auto-hotspot,raspicam,naturewatchcamera))'
++++ '[' default '!=' default ']'
++++ echo Import the variant config if we have one
+Import the variant config if we have one
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ '[' -f /distro/config.local ']'
++++ TMP='base,network,disable-services,auto-hotspot,raspicam,naturewatchcamera))'
++++ TMP='base,network,disable-services,auto-hotspot,raspicam,naturewatchcamera))'
++++ MODULES_LIST=base,network,disable-services,auto-hotspot,raspicam,naturewatchcamera,,
+++++ echo base,network,disable-services,auto-hotspot,raspicam,naturewatchcamera,,
+++++ tr , '\n'
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/base ']'
++++ '[' -d /CustomPiOS/modules/base ']'
++++ export MODULE_PATH=/CustomPiOS/modules/base
++++ MODULE_PATH=/CustomPiOS/modules/base
++++ echo loading base config at /CustomPiOS/modules/base/config
+loading base config at /CustomPiOS/modules/base/config
++++ '[' -f /CustomPiOS/modules/base/config ']'
++++ source /CustomPiOS/modules/base/config
+++++ BASE_VERSION=1.4.0
+++++ '[' -n '' ']'
+++++ BASE_PRESCRIPT=
+++++ '[' -n '' ']'
+++++ BASE_POSTSCRIPT=
+++++ '[' -n '' ']'
+++++ BASE_IMAGE_PATH=/distro/image
+++++ '[' -n '' ']'
+++++ BASE_IMAGE_RASPBIAN=yes
+++++ '[' -n '' ']'
+++++ BASE_DISTRO=raspbian
+++++ '[' raspbian == ubuntu ']'
+++++ '[' -n '' ']'
++++++ ls -t /distro/image/2020-02-13-raspbian-buster-lite.zip
++++++ head -n 1
+++++ BASE_ZIP_IMG=/distro/image/2020-02-13-raspbian-buster-lite.zip
+++++ '[' -n '' ']'
+++++ BASE_USER=pi
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_COMPRESS=yes
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_IMG_NAME=default
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_ZIP_NAME=default
+++++ '[' -n '' ']'
+++++ BASE_WORKSPACE=/distro/workspace
+++++ '[' -n '' ']'
+++++ BASE_MOUNT_PATH=/distro/workspace/mount
+++++ '[' -n '' ']'
+++++ BASE_ROOT_PARTITION=2
+++++ '[' -n 1200 ']'
+++++ '[' -n '' ']'
+++++ BASE_IMAGE_RESIZEROOT=200
+++++ '[' -n '' ']'
+++++ BASE_APT_CACHE=/distro/workspace/aptcache
+++++ '[' -n '' ']'
+++++ BASE_APT_PROXY=
+++++ '[' -n '' ']'
+++++ BASE_PYPI_INDEX=
+++++ '[' -n '' ']'
+++++ BASE_OVERRIDE_HOSTNAME=mynaturewatchcamera
+++++ '[' -n '' ']'
+++++ BASE_BUILD_REPO_MIRROR=
+++++ '[' -n '' ']'
+++++ BASE_SSH_ENABLE=yes
+++++ '[' -n '' ']'
++++++ pushd /CustomPiOS
++++++ git rev-parse HEAD
+fatal: not a git repository (or any of the parent directories): .git
++++++ popd
+++++ BASE_COMMIT=
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_MEMSPLIT=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_TIMEZONE=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_LOCALE=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_KEYBOARD=default
+++++ '[' -n '' ']'
+++++ BASE_ARCH=armv7l
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=BASE
++++ module_up=BASE_
++++ IFS=
++++ read -r var
+++++ compgen -A variable BASE_
++++ export BASE_APT_CACHE
++++ echo BASE_APT_CACHE
+BASE_APT_CACHE
++++ IFS=
++++ read -r var
++++ export BASE_APT_PROXY
++++ echo BASE_APT_PROXY
+BASE_APT_PROXY
++++ IFS=
++++ read -r var
++++ export BASE_ARCH
++++ echo BASE_ARCH
+BASE_ARCH
++++ IFS=
++++ read -r var
++++ export BASE_BUILD_REPO_MIRROR
++++ echo BASE_BUILD_REPO_MIRROR
+BASE_BUILD_REPO_MIRROR
++++ IFS=
++++ read -r var
++++ export BASE_COMMIT
++++ echo BASE_COMMIT
+BASE_COMMIT
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_KEYBOARD
++++ echo BASE_CONFIG_KEYBOARD
+BASE_CONFIG_KEYBOARD
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_LOCALE
++++ echo BASE_CONFIG_LOCALE
+BASE_CONFIG_LOCALE
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_MEMSPLIT
++++ echo BASE_CONFIG_MEMSPLIT
+BASE_CONFIG_MEMSPLIT
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_TIMEZONE
++++ echo BASE_CONFIG_TIMEZONE
+BASE_CONFIG_TIMEZONE
++++ IFS=
++++ read -r var
++++ export BASE_DISTRO
++++ echo BASE_DISTRO
+BASE_DISTRO
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_ENLARGEROOT
++++ echo BASE_IMAGE_ENLARGEROOT
+BASE_IMAGE_ENLARGEROOT
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_PATH
++++ echo BASE_IMAGE_PATH
+BASE_IMAGE_PATH
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_RASPBIAN
++++ echo BASE_IMAGE_RASPBIAN
+BASE_IMAGE_RASPBIAN
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_RESIZEROOT
++++ echo BASE_IMAGE_RESIZEROOT
+BASE_IMAGE_RESIZEROOT
++++ IFS=
++++ read -r var
++++ export BASE_MOUNT_PATH
++++ echo BASE_MOUNT_PATH
+BASE_MOUNT_PATH
++++ IFS=
++++ read -r var
++++ export BASE_OVERRIDE_HOSTNAME
++++ echo BASE_OVERRIDE_HOSTNAME
+BASE_OVERRIDE_HOSTNAME
++++ IFS=
++++ read -r var
++++ export BASE_POSTSCRIPT
++++ echo BASE_POSTSCRIPT
+BASE_POSTSCRIPT
++++ IFS=
++++ read -r var
++++ export BASE_PRESCRIPT
++++ echo BASE_PRESCRIPT
+BASE_PRESCRIPT
++++ IFS=
++++ read -r var
++++ export BASE_PYPI_INDEX
++++ echo BASE_PYPI_INDEX
+BASE_PYPI_INDEX
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_COMPRESS
++++ echo BASE_RELEASE_COMPRESS
+BASE_RELEASE_COMPRESS
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_IMG_NAME
++++ echo BASE_RELEASE_IMG_NAME
+BASE_RELEASE_IMG_NAME
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_ZIP_NAME
++++ echo BASE_RELEASE_ZIP_NAME
+BASE_RELEASE_ZIP_NAME
++++ IFS=
++++ read -r var
++++ export BASE_ROOT_PARTITION
++++ echo BASE_ROOT_PARTITION
+BASE_ROOT_PARTITION
++++ IFS=
++++ read -r var
++++ export BASE_SSH_ENABLE
++++ echo BASE_SSH_ENABLE
+BASE_SSH_ENABLE
++++ IFS=
++++ read -r var
++++ export BASE_USER
++++ echo BASE_USER
+BASE_USER
++++ IFS=
++++ read -r var
++++ export BASE_VERSION
++++ echo BASE_VERSION
+BASE_VERSION
++++ IFS=
++++ read -r var
++++ export BASE_WORKSPACE
++++ echo BASE_WORKSPACE
+BASE_WORKSPACE
++++ IFS=
++++ read -r var
++++ export BASE_ZIP_IMG
++++ echo BASE_ZIP_IMG
+BASE_ZIP_IMG
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/network ']'
++++ '[' -d /CustomPiOS/modules/network ']'
++++ export MODULE_PATH=/CustomPiOS/modules/network
++++ MODULE_PATH=/CustomPiOS/modules/network
++++ echo loading network config at /CustomPiOS/modules/network/config
+loading network config at /CustomPiOS/modules/network/config
++++ '[' -f /CustomPiOS/modules/network/config ']'
++++ source /CustomPiOS/modules/network/config
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=NETWORK
++++ module_up=NETWORK_
++++ IFS=
++++ read -r var
+++++ compgen -A variable NETWORK_
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/disable-services ']'
++++ '[' -d /CustomPiOS/modules/disable-services ']'
++++ export MODULE_PATH=/CustomPiOS/modules/disable-services
++++ MODULE_PATH=/CustomPiOS/modules/disable-services
++++ echo loading disable-services config at /CustomPiOS/modules/disable-services/config
+loading disable-services config at /CustomPiOS/modules/disable-services/config
++++ '[' -f /CustomPiOS/modules/disable-services/config ']'
++++ echo 'WARNING: module disable-services has no config file'
+WARNING: module disable-services has no config file
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=DISABLE-SERVICES
++++ module_up=DISABLE_SERVICES_
++++ IFS=
++++ read -r var
+++++ compgen -A variable DISABLE_SERVICES_
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/auto-hotspot ']'
++++ '[' -d /CustomPiOS/modules/auto-hotspot ']'
++++ export MODULE_PATH=/CustomPiOS/modules/auto-hotspot
++++ MODULE_PATH=/CustomPiOS/modules/auto-hotspot
++++ echo loading auto-hotspot config at /CustomPiOS/modules/auto-hotspot/config
+loading auto-hotspot config at /CustomPiOS/modules/auto-hotspot/config
++++ '[' -f /CustomPiOS/modules/auto-hotspot/config ']'
++++ source /CustomPiOS/modules/auto-hotspot/config
+++++ '[' -n MyNaturewatch ']'
+++++ '[' -n badgersandfoxes ']'
+++++ '[' -n '' ']'
+++++ AUTO_HOTSPOT_CHANNEL=6
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=AUTO-HOTSPOT
++++ module_up=AUTO_HOTSPOT_
++++ IFS=
++++ read -r var
+++++ compgen -A variable AUTO_HOTSPOT_
++++ export AUTO_HOTSPOT_CHANNEL
++++ echo AUTO_HOTSPOT_CHANNEL
+AUTO_HOTSPOT_CHANNEL
++++ IFS=
++++ read -r var
++++ export AUTO_HOTSPOT_NAME
++++ echo AUTO_HOTSPOT_NAME
+AUTO_HOTSPOT_NAME
++++ IFS=
++++ read -r var
++++ export AUTO_HOTSPOT_PASSWORD
++++ echo AUTO_HOTSPOT_PASSWORD
+AUTO_HOTSPOT_PASSWORD
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/raspicam ']'
++++ '[' -d /CustomPiOS/modules/raspicam ']'
++++ export MODULE_PATH=/CustomPiOS/modules/raspicam
++++ MODULE_PATH=/CustomPiOS/modules/raspicam
++++ echo loading raspicam config at /CustomPiOS/modules/raspicam/config
+loading raspicam config at /CustomPiOS/modules/raspicam/config
++++ '[' -f /CustomPiOS/modules/raspicam/config ']'
++++ source /CustomPiOS/modules/raspicam/config
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=RASPICAM
++++ module_up=RASPICAM_
++++ IFS=
++++ read -r var
+++++ compgen -A variable RASPICAM_
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_LIST}" | tr "," "\n")
++++ '[' -d /distro/modules/naturewatchcamera ']'
++++ export MODULE_PATH=/distro/modules/naturewatchcamera
++++ MODULE_PATH=/distro/modules/naturewatchcamera
++++ echo loading naturewatchcamera config at /distro/modules/naturewatchcamera/config
+loading naturewatchcamera config at /distro/modules/naturewatchcamera/config
++++ '[' -f /distro/modules/naturewatchcamera/config ']'
++++ source /distro/modules/naturewatchcamera/config
+++++ NATUREWATCHCAMERA_VAR='Naturewatch Camera Builder'
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=NATUREWATCHCAMERA
++++ module_up=NATUREWATCHCAMERA_
++++ IFS=
++++ read -r var
+++++ compgen -A variable NATUREWATCHCAMERA_
++++ export NATUREWATCHCAMERA_VAR
++++ echo NATUREWATCHCAMERA_VAR
+NATUREWATCHCAMERA_VAR
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
+++ /CustomPiOS/config_sanity
+++ '[' '' == yes ']'
+++ source /CustomPiOS/custompios
++++ set -e
++++ export LC_ALL=C
++++ LC_ALL=C
++++ source /CustomPiOS/common.sh
++++ mkdir -p /distro/workspace
++++ mkdir -p /distro/workspace/mount
++++ rm -rf '/distro/workspace/*.tar.gz'
++++ install_cleanup_trap
++++ set -e
++++ trap cleanup SIGINT SIGTERM
++++ install_fail_on_error_trap
++++ set -e
++++ trap 'echo_red "build failed, unmounting image..." && cd $DIST_PATH && ( unmount_image $BASE_MOUNT_PATH force || true ) && echo_red -e "\nBUILD FAILED!\n"' ERR
++++ unmount_image /distro/workspace/mount force
++++ mount_path=/distro/workspace/mount
++++ force=
++++ '[' 2 -gt 1 ']'
++++ force=force
++++ '[' -n force ']'
+++++ sudo lsof /distro/workspace/mount
+++++ awk '{print $2}'
+++++ sudo mount
+++++ grep /distro/workspace/mount
+++++ awk -F ' on ' '{print $2}'
+++++ awk '{print $1}'
+++++ sort -r
++++ pushd /distro/workspace
+/distro/workspace /distro
++++ '[' -e '*.img' ']'
++++ '[' '!' -f /distro/image/2020-02-13-raspbian-buster-lite.zip ']'
++++ '[' /distro/image/2020-02-13-raspbian-buster-lite.zip == '' ']'
++++ 7za x -aoa /distro/image/2020-02-13-raspbian-buster-lite.zip
+
+7-Zip (a) [32] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C,Utf16=off,HugeFiles=on,32 bits,4 CPUs LE)
+
+Scanning the drive for archives:
+1 file, 454047405 bytes (434 MiB)
+
+Extracting archive: /distro/image/2020-02-13-raspbian-buster-lite.zip
+--
+Path = /distro/image/2020-02-13-raspbian-buster-lite.zip
+Type = zip
+Physical Size = 454047405
+
+Everything is Ok
+
+Size:       1849688064
+Compressed: 454047405
+++++ ls
+++++ grep '.img$\|.raw$'
+++++ head -n 1
++++ BASE_IMG_PATH=2020-02-13-raspbian-buster-lite.img
++++ '[' '!' -f 2020-02-13-raspbian-buster-lite.img ']'
+++++ basename 2020-02-13-raspbian-buster-lite.img
++++ export CUSTOM_PI_OS_BUILDBASE=2020-02-13-raspbian-buster-lite.img
++++ CUSTOM_PI_OS_BUILDBASE=2020-02-13-raspbian-buster-lite.img
++++ '[' -n 1200 ']'
++++ enlarge_ext 2020-02-13-raspbian-buster-lite.img 2 1200
++++ image=2020-02-13-raspbian-buster-lite.img
++++ partition=2
++++ size=1200
++++ echo 'Adding 1200 MB to partition 2 of 2020-02-13-raspbian-buster-lite.img'
+Adding 1200 MB to partition 2 of 2020-02-13-raspbian-buster-lite.img
+++++ sfdisk -d 2020-02-13-raspbian-buster-lite.img
+++++ grep 2020-02-13-raspbian-buster-lite.img2
+++++ awk '{print $4-0}'
++++ start=532480
++++ offset=272629760
++++ dd if=/dev/zero bs=1M count=1200
+1200+0 records in
+1200+0 records out
+1258291200 bytes (1.3 GB, 1.2 GiB) copied, 150.044 s, 8.4 MB/s
++++ fdisk 2020-02-13-raspbian-buster-lite.img
+
+Welcome to fdisk (util-linux 2.33.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): Disk 2020-02-13-raspbian-buster-lite.img: 2.9 GiB, 3107979264 bytes, 6070272 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x738a4d67
+
+Device                               Boot  Start     End Sectors  Size Id Type
+2020-02-13-raspbian-buster-lite.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
+2020-02-13-raspbian-buster-lite.img2      532480 3612671 3080192  1.5G 83 Linux
+
+Command (m for help): Partition number (1,2, default 2): 
+Partition 2 has been deleted.
+
+Command (m for help): Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): Partition number (2-4, default 2): First sector (2048-6070271, default 2048): Last sector, +/-sectors or +/-size{K,M,G,T,P} (532480-6070271, default 6070271): 
+Created a new partition 2 of type 'Linux' and of size 2.7 GiB.
+Partition #2 contains a ext4 signature.
+
+Command (m for help): 
+Disk 2020-02-13-raspbian-buster-lite.img: 2.9 GiB, 3107979264 bytes, 6070272 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x738a4d67
+
+Device                               Boot  Start     End Sectors  Size Id Type
+2020-02-13-raspbian-buster-lite.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
+2020-02-13-raspbian-buster-lite.img2      532480 6070271 5537792  2.7G 83 Linux
+
+Command (m for help): The partition table has been altered.
+Syncing disks.
+
++++ detach_all_loopback 2020-02-13-raspbian-buster-lite.img
+++++ losetup
+++++ grep 2020-02-13-raspbian-buster-lite.img
+++++ awk '{ print $1 }'
++++ test_for_image 2020-02-13-raspbian-buster-lite.img
++++ '[' '!' -f 2020-02-13-raspbian-buster-lite.img ']'
+++++ losetup -f --show -o 272629760 2020-02-13-raspbian-buster-lite.img
++++ LODEV=/dev/loop0
++++ trap 'losetup -d $LODEV' EXIT
++++ e2fsck -fy /dev/loop0
+e2fsck 1.44.5 (15-Dec-2018)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+rootfs: 44421/96384 files (0.3% non-contiguous), 291158/385024 blocks
++++ resize2fs -p /dev/loop0
+resize2fs 1.44.5 (15-Dec-2018)
+Resizing the filesystem on /dev/loop0 to 692224 (4k) blocks.
+Begin pass 1 (max = 10)
+Extending the inode table     ----------------------------------------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The filesystem on /dev/loop0 is now 692224 (4k) blocks long.
+
++++ losetup -d /dev/loop0
++++ trap - EXIT
++++ echo 'Resized parition 2 of 2020-02-13-raspbian-buster-lite.img to +1200 MB'
+Resized parition 2 of 2020-02-13-raspbian-buster-lite.img to +1200 MB
++++ mount_image 2020-02-13-raspbian-buster-lite.img 2 /distro/workspace/mount
++++ image_path=2020-02-13-raspbian-buster-lite.img
++++ root_partition=2
++++ mount_path=/distro/workspace/mount
++++ echo 2
+2
++++ boot_partition=1
+++++ sfdisk -d 2020-02-13-raspbian-buster-lite.img
++++ fdisk_output='label: dos
+label-id: 0x738a4d67
+device: 2020-02-13-raspbian-buster-lite.img
+unit: sectors
+
+2020-02-13-raspbian-buster-lite.img1 : start=        8192, size=      524288, type=c
+2020-02-13-raspbian-buster-lite.img2 : start=      532480, size=     5537792, type=83'
+++++ echo 'label: dos
+label-id: 0x738a4d67
+device: 2020-02-13-raspbian-buster-lite.img
+unit: sectors
+
+2020-02-13-raspbian-buster-lite.img1 : start=        8192, size=      524288, type=c
+2020-02-13-raspbian-buster-lite.img2 : start=      532480, size=     5537792, type=83'
+++++ awk '{print $4-0}'
+++++ grep 2020-02-13-raspbian-buster-lite.img1
++++ boot_offset=4194304
+++++ echo 'label: dos
+label-id: 0x738a4d67
+device: 2020-02-13-raspbian-buster-lite.img
+unit: sectors
+
+2020-02-13-raspbian-buster-lite.img1 : start=        8192, size=      524288, type=c
+++++ grep 2020-02-13-raspbian-buster-lite.img2
+2020-02-13-raspbian-buster-lite.img2 : start=      532480, size=     5537792, type=83'
+++++ awk '{print $4-0}'
++++ root_offset=272629760
++++ echo 'Mounting image 2020-02-13-raspbian-buster-lite.img on /distro/workspace/mount, offset for boot partition is 4194304, offset for root partition is 272629760'
+Mounting image 2020-02-13-raspbian-buster-lite.img on /distro/workspace/mount, offset for boot partition is 4194304, offset for root partition is 272629760
++++ detach_all_loopback 2020-02-13-raspbian-buster-lite.img
+++++ losetup
+++++ grep 2020-02-13-raspbian-buster-lite.img
+++++ awk '{ print $1 }'
++++ sudo losetup -f
+/dev/loop0
++++ sudo mount -o loop,offset=272629760 2020-02-13-raspbian-buster-lite.img /distro/workspace/mount/
++++ [[ 1 != \2 ]]
++++ sudo losetup -f
+/dev/loop1
+++++ expr 272629760 - 4194304
++++ sudo mount -o loop,offset=4194304,sizelimit=268435456 2020-02-13-raspbian-buster-lite.img /distro/workspace/mount/boot
++++ sudo mkdir -p /distro/workspace/mount/dev/pts
++++ sudo mount -o bind /dev /distro/workspace/mount/dev
++++ sudo mount -o bind /dev/pts /distro/workspace/mount/dev/pts
++++ '[' -n /distro/workspace/aptcache ']'
++++ '[' /distro/workspace/aptcache '!=' no ']'
++++ mkdir -p /distro/workspace/aptcache
++++ mount --bind /distro/workspace/aptcache /distro/workspace/mount/var/cache/apt
++++ pushd /distro/workspace/mount
+/distro/workspace/mount /distro/workspace /distro
++++ '[' yes == yes ']'
++++ fixLd
++++ '[' -f etc/ld.so.preload ']'
++++ sed -i 's@/usr/lib/arm-linux-gnueabihf/libcofi_rpi.so@\#/usr/lib/arm-linux-gnueabihf/libcofi_rpi.so@' etc/ld.so.preload
++++ sed -i 's@/usr/lib/arm-linux-gnueabihf/libarmmem.so@\#/usr/lib/arm-linux-gnueabihf/libarmmem.so@' etc/ld.so.preload
++++ sed -i 's@/usr/lib/arm-linux-gnueabihf/libarmmem-${PLATFORM}.so@#/usr/lib/arm-linux-gnueabihf/libarmmem-${PLATFORM}.so@' etc/ld.so.preload
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ CHROOT_SCRIPT=/distro/workspace/chroot_script
++++ python3 /CustomPiOS/execution_order.py 'base(network,disable-services(auto-hotspot,raspicam,naturewatchcamera))' /distro/workspace/chroot_script
+WARNING: No file at - /CustomPiOS/modules/network/end_chroot_script
+WARNING: No file at - /CustomPiOS/modules/auto-hotspot/end_chroot_script
+WARNING: No file at - /CustomPiOS/modules/raspicam/end_chroot_script
++++ export -f execute_chroot_script
++++ bash -x /distro/workspace/chroot_script
++ set -x
++ set -e
++ execute_chroot_script /CustomPiOS/modules/base /CustomPiOS/modules/base/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/base/filesystem ']'
++ cp -vr --preserve=mode,timestamps /CustomPiOS/modules/base/filesystem .
+'/CustomPiOS/modules/base/filesystem' -> './filesystem'
+'/CustomPiOS/modules/base/filesystem/ubuntu' -> './filesystem/ubuntu'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr' -> './filesystem/ubuntu/usr'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib' -> './filesystem/ubuntu/usr/lib'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd' -> './filesystem/ubuntu/usr/lib/dhcpcd'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/base/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ export LC_ALL=C
++ LC_ALL=C
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ '[' raspbian == ubuntu ']'
++ '[' -n '' ']'
++ '[' -n '' ']'
++ '[' yes == yes ']'
++ touch /boot/ssh
++ echo 'IPQoS 0x00'
++ echo 'IPQoS 0x00'
++ '[' -f /lib/systemd/system/regenerate_ssh_host_keys.service ']'
++ sed -i 's@ExecStart=/usr/bin/ssh-keygen -A -v@ExecStart=/bin/bash -c '\'' /usr/bin/ssh-keygen -A -v >> /var/log/regenerate_ssh_host_keys.log 2>\&1'\''@g' /lib/systemd/system/regenerate_ssh_host_keys.service
++ sed -i 's@ExecStartPost=/bin/systemctl disable regenerate_ssh_host_keys@ExecStartPost=/bin/bash -c '\''for i in /etc/ssh/ssh_host_*_key*; do actualsize=$(wc -c <"$i") ;if [ $actualsize -eq 0 ]; then echo size is 0 bytes ; exit 1 ; fi ; done ; /bin/systemctl disable regenerate_ssh_host_keys'\''@g' /lib/systemd/system/regenerate_ssh_host_keys.service
++ echo 2020-02-13-raspbian-buster-lite.img
++ echo 1.0b
++ echo default
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd'
+removed directory 'filesystem/ubuntu/usr/lib'
+removed directory 'filesystem/ubuntu/usr'
+removed directory 'filesystem/ubuntu'
+removed directory 'filesystem'
++ execute_chroot_script /CustomPiOS/modules/network /CustomPiOS/modules/network/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/network/filesystem ']'
++ cp -vr --preserve=mode,timestamps /CustomPiOS/modules/network/filesystem .
+'/CustomPiOS/modules/network/filesystem' -> './filesystem'
+'/CustomPiOS/modules/network/filesystem/boot' -> './filesystem/boot'
+'/CustomPiOS/modules/network/filesystem/boot/custompios-wpa-supplicant.txt' -> './filesystem/boot/custompios-wpa-supplicant.txt'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/network/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ export LC_ALL=C
++ LC_ALL=C
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ unpack /filesystem/boot /boot
++ from=/filesystem/boot
++ to=/boot
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/boot/. /tmp/unpack/
+'/filesystem/boot/./custompios-wpa-supplicant.txt' -> '/tmp/unpack/./custompios-wpa-supplicant.txt'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /boot
+'/tmp/unpack/./custompios-wpa-supplicant.txt' -> '/boot/./custompios-wpa-supplicant.txt'
++ rm -r /tmp/unpack
++ DIST_NETWORK_FILE=/boot/mynaturewatchcamera-wpa-supplicant.txt
++ mv /boot/custompios-wpa-supplicant.txt /boot/mynaturewatchcamera-wpa-supplicant.txt
++ '[' raspbian == ubuntu ']'
++ cat /etc/wpa_supplicant/wpa_supplicant.conf
++ rm -f /etc/wpa_supplicant/wpa_supplicant.conf
++ '[' raspbian == raspbian ']'
++ rm /var/lib/systemd/rfkill/platform-3f300000.mmcnr:wlan /var/lib/systemd/rfkill/platform-fe300000.mmcnr:wlan
++ '[' raspbian == ubuntu ']'
++ ln -s /boot/mynaturewatchcamera-wpa-supplicant.txt /etc/wpa_supplicant/wpa_supplicant.conf
++ '[' -f /etc/ifplugd/action.d/ifupdown ']'
++ '[' -f /etc/wpa_supplicant/ifupdown.sh ']'
++ ln -s /etc/wpa_supplicant/ifupdown.sh /etc/ifplugd/action.d/ifupdown
++ '[' '!' -f /etc/rc.local ']'
++ sed -i 's@exit 0@@' /etc/rc.local
++ echo '/sbin/iptables -t mangle -I POSTROUTING 1 -o wlan0 -p udp --dport 123 -j TOS --set-tos 0x00'
++ echo 'exit 0'
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/boot/custompios-wpa-supplicant.txt'
+removed directory 'filesystem/boot'
+removed directory 'filesystem'
++ execute_chroot_script /CustomPiOS/modules/disable-services /CustomPiOS/modules/disable-services/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/disable-services/filesystem ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/disable-services/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ apt-get update
+Get:1 http://raspbian.raspberrypi.org/raspbian buster InRelease [15.0 kB]
+Get:2 http://archive.raspberrypi.org/debian buster InRelease [25.2 kB]
+Get:3 http://raspbian.raspberrypi.org/raspbian buster/main armhf Packages [13.0 MB]
+Get:4 http://archive.raspberrypi.org/debian buster/main armhf Packages [327 kB]
+Fetched 13.4 MB in 21s (627 kB/s)
+Reading package lists...
+++ is_in_apt policykit-1
++++ apt-cache policy policykit-1
++++ awk '{print $1}'
++++ wc
+++ '[' 7 -gt 0 ']'
+++ echo 1
++ '[' 1 -eq 1 ']'
++ sudo apt-get -y install policykit-1
+sudo: unable to resolve host 7411c3828e37: Name or service not known
+Reading package lists...
+Building dependency tree...
+Reading state information...
+policykit-1 is already the newest version (0.105-25).
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
++ echo exit 101
++ chmod +x /usr/sbin/policy-rc.d
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ execute_chroot_script /CustomPiOS/modules/auto-hotspot /CustomPiOS/modules/auto-hotspot/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/auto-hotspot/filesystem ']'
++ cp -vr --preserve=mode,timestamps /CustomPiOS/modules/auto-hotspot/filesystem .
+'/CustomPiOS/modules/auto-hotspot/filesystem' -> './filesystem'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root' -> './filesystem/root'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc' -> './filesystem/root/etc'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc/hostapd' -> './filesystem/root/etc/hostapd'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc/hostapd/hostapd.conf' -> './filesystem/root/etc/hostapd/hostapd.conf'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc/systemd' -> './filesystem/root/etc/systemd'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc/systemd/system' -> './filesystem/root/etc/systemd/system'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/etc/systemd/system/autohotspot.service' -> './filesystem/root/etc/systemd/system/autohotspot.service'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/usr' -> './filesystem/root/usr'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/usr/bin' -> './filesystem/root/usr/bin'
+'/CustomPiOS/modules/auto-hotspot/filesystem/root/usr/bin/autohotspotN' -> './filesystem/root/usr/bin/autohotspotN'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/auto-hotspot/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ source /common.sh
++ apt-get update
+Hit:1 http://archive.raspberrypi.org/debian buster InRelease
+Hit:2 http://raspbian.raspberrypi.org/raspbian buster InRelease
+Reading package lists...
++ apt-get -y purge dns-root-data
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'dns-root-data' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
++ apt-get -y install iw
+Reading package lists...
+Building dependency tree...
+Reading state information...
+iw is already the newest version (5.0.1-1).
+iw set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
++ apt-get purge dns-root-data
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'dns-root-data' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
++ apt-get install -y hostapd dnsmasq
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  dns-root-data dnsmasq-base
+The following NEW packages will be installed:
+  dns-root-data dnsmasq dnsmasq-base hostapd
+0 upgraded, 4 newly installed, 0 to remove and 26 not upgraded.
+Need to get 1052 kB of archives.
+After this operation, 2666 kB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian buster/main armhf dnsmasq-base armhf 2.80-1+rpt1 [400 kB]
+Get:4 http://archive.raspberrypi.org/debian buster/main armhf dnsmasq all 2.80-1+rpt1 [16.5 kB]
+Get:2 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf hostapd armhf 2:2.7+git20190128+0c1e29f-6+deb10u1 [630 kB]
+Get:3 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf dns-root-data all 2019031302 [5396 B]
+Fetched 1052 kB in 8s (127 kB/s)
+Selecting previously unselected package hostapd.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 39839 files and directories currently installed.)
+Preparing to unpack .../hostapd_2%3a2.7+git20190128+0c1e29f-6+deb10u1_armhf.deb ...
+Unpacking hostapd (2:2.7+git20190128+0c1e29f-6+deb10u1) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../dns-root-data_2019031302_all.deb ...
+Unpacking dns-root-data (2019031302) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../dnsmasq-base_2.80-1+rpt1_armhf.deb ...
+Unpacking dnsmasq-base (2.80-1+rpt1) ...
+Selecting previously unselected package dnsmasq.
+Preparing to unpack .../dnsmasq_2.80-1+rpt1_all.deb ...
+Unpacking dnsmasq (2.80-1+rpt1) ...
+Setting up dnsmasq-base (2.80-1+rpt1) ...
+Setting up dns-root-data (2019031302) ...
+Setting up dnsmasq (2.80-1+rpt1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/dnsmasq.service -> /lib/systemd/system/dnsmasq.service.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up hostapd (2:2.7+git20190128+0c1e29f-6+deb10u1) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink /etc/systemd/system/multi-user.target.wants/hostapd.service -> /lib/systemd/system/hostapd.service.
+Processing triggers for systemd (241-7~deb10u2+rpi1) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for dbus (1.12.16-1) ...
++ systemctl disable hostapd
+Synchronizing state of hostapd.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable hostapd
+Removed /etc/systemd/system/multi-user.target.wants/hostapd.service.
++ systemctl disable dnsmasq
+Synchronizing state of dnsmasq.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable dnsmasq
+Removed /etc/systemd/system/multi-user.target.wants/dnsmasq.service.
++ unpack /filesystem/root /
++ from=/filesystem/root
++ to=/
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/root/. /tmp/unpack/
+'/filesystem/root/./etc' -> '/tmp/unpack/./etc'
+'/filesystem/root/./etc/hostapd' -> '/tmp/unpack/./etc/hostapd'
+'/filesystem/root/./etc/hostapd/hostapd.conf' -> '/tmp/unpack/./etc/hostapd/hostapd.conf'
+'/filesystem/root/./etc/systemd' -> '/tmp/unpack/./etc/systemd'
+'/filesystem/root/./etc/systemd/system' -> '/tmp/unpack/./etc/systemd/system'
+'/filesystem/root/./etc/systemd/system/autohotspot.service' -> '/tmp/unpack/./etc/systemd/system/autohotspot.service'
+'/filesystem/root/./usr' -> '/tmp/unpack/./usr'
+'/filesystem/root/./usr/bin' -> '/tmp/unpack/./usr/bin'
+'/filesystem/root/./usr/bin/autohotspotN' -> '/tmp/unpack/./usr/bin/autohotspotN'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./etc/hostapd/hostapd.conf' -> '/./etc/hostapd/hostapd.conf'
+'/tmp/unpack/./etc/systemd/system/autohotspot.service' -> '/./etc/systemd/system/autohotspot.service'
+'/tmp/unpack/./usr/bin/autohotspotN' -> '/./usr/bin/autohotspotN'
++ rm -r /tmp/unpack
++ sed -i s/AUTO_HOTSPOT_NAME/MyNaturewatch/g /etc/hostapd/hostapd.conf
++ sed -i s/AUTO_HOTSPOT_PASSWORD/badgersandfoxes/g /etc/hostapd/hostapd.conf
++ sed -i s/AUTO_HOTSPOT_CHANNEL/6/g /etc/hostapd/hostapd.conf
++ grep -Fxq DAEMON_CONF /etc/default/hostapd
++ echo 'DAEMON_CONF="/etc/hostapd/hostapd.conf"'
++ sed -i 's@^DAEMON_OPTS=""@^#DAEMON_OPTS=""@g' /etc/default/hostapd
++ echo '
+# Auto-hotspot Config
+# Interface to use
+interface=wlan0
+bind-interfaces
+dhcp-range=192.168.50.150,192.168.50.200,255.255.255.0,12h
+'
++ sed -i s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g /etc/sysctl.conf
++ cp /etc/network/interfaces /etc/network/interfaces-backup
++ echo ''
++ echo '* * * * * /usr/bin/autohotspotN'
++ crontab -
++ systemctl enable autohotspot.service
+Created symlink /etc/systemd/system/multi-user.target.wants/autohotspot.service -> /etc/systemd/system/autohotspot.service.
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/root/etc/systemd/system/autohotspot.service'
+removed directory 'filesystem/root/etc/systemd/system'
+removed directory 'filesystem/root/etc/systemd'
+removed 'filesystem/root/etc/hostapd/hostapd.conf'
+removed directory 'filesystem/root/etc/hostapd'
+removed directory 'filesystem/root/etc'
+removed 'filesystem/root/usr/bin/autohotspotN'
+removed directory 'filesystem/root/usr/bin'
+removed directory 'filesystem/root/usr'
+removed directory 'filesystem/root'
+removed directory 'filesystem'
++ execute_chroot_script /CustomPiOS/modules/raspicam /CustomPiOS/modules/raspicam/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/raspicam/filesystem ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/raspicam/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ echo '# enable raspicam'
++ echo start_x=1
++ echo gpu_mem=128
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ execute_chroot_script /distro/modules/naturewatchcamera /distro/modules/naturewatchcamera/start_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /distro/modules/naturewatchcamera/filesystem ']'
++ cp -vr --preserve=mode,timestamps /distro/modules/naturewatchcamera/filesystem .
+'/distro/modules/naturewatchcamera/filesystem' -> './filesystem'
+'/distro/modules/naturewatchcamera/filesystem/boot' -> './filesystem/boot'
+'/distro/modules/naturewatchcamera/filesystem/boot/README' -> './filesystem/boot/README'
+'/distro/modules/naturewatchcamera/filesystem/home' -> './filesystem/home'
+'/distro/modules/naturewatchcamera/filesystem/home/pi' -> './filesystem/home/pi'
+'/distro/modules/naturewatchcamera/filesystem/home/pi/README' -> './filesystem/home/pi/README'
+'/distro/modules/naturewatchcamera/filesystem/home/root' -> './filesystem/home/root'
+'/distro/modules/naturewatchcamera/filesystem/home/root/README' -> './filesystem/home/root/README'
+'/distro/modules/naturewatchcamera/filesystem/root' -> './filesystem/root'
+'/distro/modules/naturewatchcamera/filesystem/root/README' -> './filesystem/root/README'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /distro/modules/naturewatchcamera/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ unpack /filesystem/home/pi /home/pi pi
++ from=/filesystem/home/pi
++ to=/home/pi
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=pi
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/home/pi/. /tmp/unpack/
+'/filesystem/home/pi/./README' -> '/tmp/unpack/./README'
++ '[' -n pi ']'
++ chown -hR pi:pi /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /home/pi
+'/tmp/unpack/./README' -> '/home/pi/./README'
++ rm -r /tmp/unpack
++ unpack /filesystem/home/root /root root
++ from=/filesystem/home/root
++ to=/root
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=root
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/home/root/. /tmp/unpack/
+'/filesystem/home/root/./README' -> '/tmp/unpack/./README'
++ '[' -n root ']'
++ chown -hR root:root /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /root
+'/tmp/unpack/./README' -> '/root/./README'
++ rm -r /tmp/unpack
++ unpack /filesystem/boot /boot
++ from=/filesystem/boot
++ to=/boot
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/boot/. /tmp/unpack/
+'/filesystem/boot/./README' -> '/tmp/unpack/./README'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /boot
+'/tmp/unpack/./README' -> '/boot/./README'
++ rm -r /tmp/unpack
++ echo -----------------------------------------
+-----------------------------------------
++ echo 'Naturewatch Camera Builder'
+Naturewatch Camera Builder
++ apt-get update
+Hit:1 http://raspbian.raspberrypi.org/raspbian buster InRelease
+Hit:2 http://archive.raspberrypi.org/debian buster InRelease
+Reading package lists...
++ apt-get install -y git
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  git-man libcurl3-gnutls liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man libcurl3-gnutls liberror-perl
+0 upgraded, 4 newly installed, 0 to remove and 26 not upgraded.
+Need to get 6137 kB of archives.
+After this operation, 32.9 MB of additional disk space will be used.
+Get:1 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcurl3-gnutls armhf 7.64.0-4+deb10u1 [292 kB]
+Get:2 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf liberror-perl all 0.17027-2 [30.9 kB]
+Get:3 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf git-man all 1:2.20.1-2+deb10u3 [1620 kB]
+Get:4 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf git armhf 1:2.20.1-2+deb10u3 [4194 kB]
+Fetched 6137 kB in 9s (650 kB/s)
+Selecting previously unselected package libcurl3-gnutls:armhf.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 39920 files and directories currently installed.)
+Preparing to unpack .../libcurl3-gnutls_7.64.0-4+deb10u1_armhf.deb ...
+Unpacking libcurl3-gnutls:armhf (7.64.0-4+deb10u1) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../liberror-perl_0.17027-2_all.deb ...
+Unpacking liberror-perl (0.17027-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.20.1-2+deb10u3_all.deb ...
+Unpacking git-man (1:2.20.1-2+deb10u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.20.1-2+deb10u3_armhf.deb ...
+Unpacking git (1:2.20.1-2+deb10u3) ...
+Setting up libcurl3-gnutls:armhf (7.64.0-4+deb10u1) ...
+Setting up liberror-perl (0.17027-2) ...
+Setting up git-man (1:2.20.1-2+deb10u3) ...
+Setting up git (1:2.20.1-2+deb10u3) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
++ echo 'Installing OpenCV dependencies'
+Installing OpenCV dependencies
++ apt-get install -y libavutil56 libcairo-gobject2 libgtk-3-0 libpango-1.0-0 libavcodec58 libcairo2 libswscale5 libtiff5 libatk1.0-0 libavformat58 libgdk-pixbuf2.0-0 libilmbase23 libjasper1 libopenexr23 libpangocairo-1.0-0 libwebp6
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  adwaita-icon-theme at-spi2-core dbus-user-session dconf-gsettings-backend
+  dconf-service fontconfig fontconfig-config fonts-dejavu-core glib-networking
+  glib-networking-common glib-networking-services gsettings-desktop-schemas
+  gtk-update-icon-cache hicolor-icon-theme libaacs0 libaom0 libatk-bridge2.0-0
+  libatk1.0-data libatspi2.0-0 libavahi-client3 libbdplus0 libbluray2
+  libchromaprint1 libcodec2-0.8.1 libcolord2 libcroco3 libcups2 libdatrie1
+  libdconf1 libdrm-amdgpu1 libdrm-common libdrm-nouveau2 libdrm-radeon1
+  libdrm2 libepoxy0 libfontconfig1 libgdk-pixbuf2.0-bin
+  libgdk-pixbuf2.0-common libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0
+  libglx-mesa0 libglx0 libgme0 libgraphite2-3 libgsm1 libgtk-3-bin
+  libgtk-3-common libharfbuzz0b libjbig0 libjson-glib-1.0-0
+  libjson-glib-1.0-common liblcms2-2 libllvm9 libmp3lame0 libmpg123-0 libogg0
+  libopenjp2-7 libopenmpt0 libopus0 libpangoft2-1.0-0 libpixman-1-0
+  libproxy1v5 librest-0.7-0 librsvg2-2 librsvg2-common libsensors-config
+  libsensors5 libshine3 libsnappy1v5 libsoup-gnome2.4-1 libsoup2.4-1 libsoxr0
+  libspeex1 libssh-gcrypt-4 libswresample3 libthai-data libthai0 libtheora0
+  libtwolame0 libva-drm2 libva-x11-2 libva2 libvdpau-va-gl1 libvdpau1
+  libvorbis0a libvorbisenc2 libvorbisfile3 libvpx5 libwavpack1
+  libwayland-client0 libwayland-cursor0 libwayland-egl1 libwebpmux3
+  libx11-xcb1 libx264-155 libx265-165 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0
+  libxcb-present0 libxcb-render0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0
+  libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1
+  libxkbcommon0 libxrandr2 libxrender1 libxshmfence1 libxtst6 libxvidcore4
+  libxxf86vm1 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers
+  va-driver-all vdpau-driver-all x11-common
+Suggested packages:
+  libbluray-bdj colord cups-common gvfs libjasper-runtime liblcms2-utils
+  opus-tools librsvg2-bin lm-sensors speex
+The following NEW packages will be installed:
+  adwaita-icon-theme at-spi2-core dbus-user-session dconf-gsettings-backend
+  dconf-service fontconfig fontconfig-config fonts-dejavu-core glib-networking
+  glib-networking-common glib-networking-services gsettings-desktop-schemas
+  gtk-update-icon-cache hicolor-icon-theme libaacs0 libaom0 libatk-bridge2.0-0
+  libatk1.0-0 libatk1.0-data libatspi2.0-0 libavahi-client3 libavcodec58
+  libavformat58 libavutil56 libbdplus0 libbluray2 libcairo-gobject2 libcairo2
+  libchromaprint1 libcodec2-0.8.1 libcolord2 libcroco3 libcups2 libdatrie1
+  libdconf1 libdrm-amdgpu1 libdrm-common libdrm-nouveau2 libdrm-radeon1
+  libdrm2 libepoxy0 libfontconfig1 libgdk-pixbuf2.0-0 libgdk-pixbuf2.0-bin
+  libgdk-pixbuf2.0-common libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0
+  libglx-mesa0 libglx0 libgme0 libgraphite2-3 libgsm1 libgtk-3-0 libgtk-3-bin
+  libgtk-3-common libharfbuzz0b libilmbase23 libjasper1 libjbig0
+  libjson-glib-1.0-0 libjson-glib-1.0-common liblcms2-2 libllvm9 libmp3lame0
+  libmpg123-0 libogg0 libopenexr23 libopenjp2-7 libopenmpt0 libopus0
+  libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpixman-1-0
+  libproxy1v5 librest-0.7-0 librsvg2-2 librsvg2-common libsensors-config
+  libsensors5 libshine3 libsnappy1v5 libsoup-gnome2.4-1 libsoup2.4-1 libsoxr0
+  libspeex1 libssh-gcrypt-4 libswresample3 libswscale5 libthai-data libthai0
+  libtheora0 libtiff5 libtwolame0 libva-drm2 libva-x11-2 libva2
+  libvdpau-va-gl1 libvdpau1 libvorbis0a libvorbisenc2 libvorbisfile3 libvpx5
+  libwavpack1 libwayland-client0 libwayland-cursor0 libwayland-egl1 libwebp6
+  libwebpmux3 libx11-xcb1 libx264-155 libx265-165 libxcb-dri2-0 libxcb-dri3-0
+  libxcb-glx0 libxcb-present0 libxcb-render0 libxcb-shm0 libxcb-sync1
+  libxcb-xfixes0 libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6
+  libxinerama1 libxkbcommon0 libxrandr2 libxrender1 libxshmfence1 libxtst6
+  libxvidcore4 libxxf86vm1 libzvbi-common libzvbi0 mesa-va-drivers
+  mesa-vdpau-drivers va-driver-all vdpau-driver-all x11-common
+0 upgraded, 142 newly installed, 0 to remove and 26 not upgraded.
+Need to get 70.1 MB of archives.
+After this operation, 751 MB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian buster/main armhf gtk-update-icon-cache armhf 3.24.5-1+rpt2 [80.5 kB]
+Get:2 http://archive.raspberrypi.org/debian buster/main armhf libpixman-1-0 armhf 0.36.0-1+rpt1 [476 kB]
+Get:6 http://archive.raspberrypi.org/debian buster/main armhf libcairo2 armhf 1.16.0-4+rpt1 [600 kB]
+Get:7 http://archive.raspberrypi.org/debian buster/main armhf libdrm-common all 2.4.100-4+rpi1~bpo10+1 [14.4 kB]
+Get:8 http://archive.raspberrypi.org/debian buster/main armhf libdrm2 armhf 2.4.100-4+rpi1~bpo10+1 [36.6 kB]
+Get:9 http://archive.raspberrypi.org/debian buster/main armhf libavutil56 armhf 7:4.1.4-1+rpt7~deb10u1 [345 kB]
+Get:3 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libjasper1 armhf 1.900.1-debian1-2.4+deb8u1 [110 kB]
+Get:11 http://archive.raspberrypi.org/debian buster/main armhf libswresample3 armhf 7:4.1.4-1+rpt7~deb10u1 [109 kB]
+Get:12 http://archive.raspberrypi.org/debian buster/main armhf libavcodec58 armhf 7:4.1.4-1+rpt7~deb10u1 [8882 kB]
+Get:4 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf hicolor-icon-theme all 0.17-2 [11.4 kB]
+Get:5 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libjbig0 armhf 2.1-3.1+b2 [27.6 kB]
+Get:10 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwebp6 armhf 0.6.1-2 [228 kB]
+Get:13 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libtiff5 armhf 4.1.0+git191117-2~deb10u1 [249 kB]
+Get:14 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgdk-pixbuf2.0-common all 2.38.1+dfsg-1 [316 kB]
+Get:15 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgdk-pixbuf2.0-0 armhf 2.38.1+dfsg-1 [157 kB]
+Get:16 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf fonts-dejavu-core all 2.37-1 [1068 kB]
+Get:17 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf fontconfig-config all 2.13.1-2 [280 kB]
+Get:18 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libfontconfig1 armhf 2.13.1-2 [327 kB]
+Get:19 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-render0 armhf 1.13.1-2 [108 kB]
+Get:20 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-shm0 armhf 1.13.1-2 [99.3 kB]
+Get:21 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxrender1 armhf 1:0.9.10-1 [29.9 kB]
+Get:22 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcroco3 armhf 0.6.12-3 [132 kB]
+Get:23 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf fontconfig armhf 2.13.1-2 [404 kB]
+Get:24 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libthai-data all 0.1.28-2 [170 kB]
+Get:25 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libdatrie1 armhf 0.2.12-2 [35.9 kB]
+Get:26 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libthai0 armhf 0.1.28-2 [50.9 kB]
+Get:27 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpango-1.0-0 armhf 1.42.4-7~deb10u1 [168 kB]
+Get:28 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgraphite2-3 armhf 1.3.13-7 [69.6 kB]
+Get:29 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libharfbuzz0b armhf 2.3.1-1 [1144 kB]
+Get:30 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpangoft2-1.0-0 armhf 1.42.4-7~deb10u1 [62.0 kB]
+Get:31 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpangocairo-1.0-0 armhf 1.42.4-7~deb10u1 [51.7 kB]
+Get:32 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf librsvg2-2 armhf 2.44.10-2.1+rpi1 [967 kB]
+Get:33 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf librsvg2-common armhf 2.44.10-2.1+rpi1 [23.1 kB]
+Get:34 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf adwaita-icon-theme all 3.30.1-1 [11.7 MB]
+Get:46 http://archive.raspberrypi.org/debian buster/main armhf libavformat58 armhf 7:4.1.4-1+rpt7~deb10u1 [1502 kB]
+Get:51 http://archive.raspberrypi.org/debian buster/main armhf libcairo-gobject2 armhf 1.16.0-4+rpt1 [123 kB]
+Get:52 http://archive.raspberrypi.org/debian buster/main armhf libdrm-amdgpu1 armhf 2.4.100-4+rpi1~bpo10+1 [26.9 kB]
+Get:53 http://archive.raspberrypi.org/debian buster/main armhf libdrm-nouveau2 armhf 2.4.100-4+rpi1~bpo10+1 [24.8 kB]
+Get:54 http://archive.raspberrypi.org/debian buster/main armhf libdrm-radeon1 armhf 2.4.100-4+rpi1~bpo10+1 [29.0 kB]
+Get:55 http://archive.raspberrypi.org/debian buster/main armhf libglvnd0 armhf 1.3.0-7~bpo10+1 [53.7 kB]
+Get:57 http://archive.raspberrypi.org/debian buster/main armhf libglapi-mesa armhf 19.3.2-1~bpo10+1~rpt1 [78.0 kB]
+Get:58 http://archive.raspberrypi.org/debian buster/main armhf libllvm9 armhf 1:9.0.1-6+rpi1~bpo10+1 [13.1 MB]
+Get:35 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libatspi2.0-0 armhf 2.30.0-7 [54.3 kB]
+Get:36 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxi6 armhf 2:1.7.9-1 [77.8 kB]
+Get:37 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf x11-common all 1:7.7+19 [251 kB]
+Get:38 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxtst6 armhf 2:1.2.3-1 [26.3 kB]
+Get:39 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf at-spi2-core armhf 2.30.0-7 [64.6 kB]
+Get:40 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf dbus-user-session armhf 1.12.16-1 [93.4 kB]
+Get:41 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libdconf1 armhf 0.30.1-2 [36.3 kB]
+Get:42 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf dconf-service armhf 0.30.1-2 [33.3 kB]
+Get:43 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf dconf-gsettings-backend armhf 0.30.1-2 [24.7 kB]
+Get:44 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libproxy1v5 armhf 0.4.15-5 [49.8 kB]
+Get:45 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf glib-networking-common all 2.58.0-2 [59.3 kB]
+Get:47 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf glib-networking-services armhf 2.58.0-2 [13.0 kB]
+Get:48 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf gsettings-desktop-schemas all 3.28.1-1 [529 kB]
+Get:49 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf glib-networking armhf 2.58.0-2 [47.7 kB]
+Get:50 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libaacs0 armhf 0.9.0-2 [46.2 kB]
+Get:56 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libaom0 armhf 1.0.0-3 [752 kB]
+Get:59 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libatk1.0-data all 2.30.0-2 [145 kB]
+Get:60 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libatk1.0-0 armhf 2.30.0-2 [42.7 kB]
+Get:61 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libatk-bridge2.0-0 armhf 2.30.0-5 [51.1 kB]
+Get:62 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libavahi-client3 armhf 0.7-4+b1 [54.0 kB]
+Get:63 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libva2 armhf 2.4.0-1 [50.2 kB]
+Get:64 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libva-drm2 armhf 2.4.0-1 [16.0 kB]
+Get:65 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxfixes3 armhf 1:5.0.3-1 [20.6 kB]
+Get:66 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libva-x11-2 armhf 2.4.0-1 [19.4 kB]
+Get:67 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvdpau1 armhf 1.1.1-10 [39.5 kB]
+Get:68 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcodec2-0.8.1 armhf 0.8.1-2 [214 kB]
+Get:69 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgsm1 armhf 1.0.18-2 [26.7 kB]
+Get:70 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libmp3lame0 armhf 3.100-2+b1 [349 kB]
+Get:71 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopenjp2-7 armhf 2.3.0-2+deb10u1 [138 kB]
+Get:72 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopus0 armhf 1.3-1 [169 kB]
+Get:73 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libshine3 armhf 3.1.1-2+b1 [22.0 kB]
+Get:74 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsnappy1v5 armhf 1.1.7-1 [15.4 kB]
+Get:75 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libspeex1 armhf 1.2~rc1.2-1+b2 [51.8 kB]
+Get:76 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsoxr0 armhf 0.1.2-3 [49.4 kB]
+Get:77 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libogg0 armhf 1.3.2-1+b2 [16.2 kB]
+Get:78 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libtheora0 armhf 1.1.1+dfsg.1-15 [148 kB]
+Get:79 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libtwolame0 armhf 0.3.13-4 [44.9 kB]
+Get:80 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvorbis0a armhf 1.3.6-2 [82.4 kB]
+Get:81 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvorbisenc2 armhf 1.3.6-2 [74.0 kB]
+Get:82 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvpx5 armhf 1.7.0-3+deb10u1 [449 kB]
+Get:83 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwavpack1 armhf 5.1.0-6 [74.0 kB]
+Get:84 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwebpmux3 armhf 0.6.1-2 [94.2 kB]
+Get:85 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libx264-155 armhf 2:0.155.2917+git0a84d98-2+rpi1 [713 kB]
+Get:133 http://archive.raspberrypi.org/debian buster/main armhf libgl1-mesa-dri armhf 19.3.2-1~bpo10+1~rpt1 [5550 kB]
+Get:86 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libx265-165 armhf 2.9-4 [517 kB]
+Get:87 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxvidcore4 armhf 2:1.3.5-1 [197 kB]
+Get:88 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libzvbi-common all 0.2.35-16 [64.3 kB]
+Get:89 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libzvbi0 armhf 0.2.35-16 [237 kB]
+Get:90 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libbluray2 armhf 1:1.1.0-1 [128 kB]
+Get:91 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libchromaprint1 armhf 1.4.3-3 [36.1 kB]
+Get:92 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgme0 armhf 0.6.2-1 [108 kB]
+Get:93 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libmpg123-0 armhf 1.25.10-2 [122 kB]
+Get:94 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvorbisfile3 armhf 1.3.6-2 [24.6 kB]
+Get:95 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopenmpt0 armhf 0.4.3-1 [533 kB]
+Get:134 http://archive.raspberrypi.org/debian buster/main armhf libglx-mesa0 armhf 19.3.2-1~bpo10+1~rpt1 [166 kB]
+Get:135 http://archive.raspberrypi.org/debian buster/main armhf libglx0 armhf 1.3.0-7~bpo10+1 [25.8 kB]
+Get:136 http://archive.raspberrypi.org/debian buster/main armhf libgl1 armhf 1.3.0-7~bpo10+1 [104 kB]
+Get:137 http://archive.raspberrypi.org/debian buster/main armhf libgtk-3-common all 3.24.5-1+rpt2 [3680 kB]
+Get:96 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libssh-gcrypt-4 armhf 0.8.7-1 [170 kB]
+Get:97 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libbdplus0 armhf 0.1.2-3 [42.5 kB]
+Get:98 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf liblcms2-2 armhf 2.9-3 [116 kB]
+Get:99 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcolord2 armhf 1.4.3-4 [119 kB]
+Get:100 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcups2 armhf 2.2.10-6+deb10u2 [287 kB]
+Get:101 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libepoxy0 armhf 1.5.3-0.1 [167 kB]
+Get:102 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgdk-pixbuf2.0-bin armhf 2.38.1+dfsg-1 [23.0 kB]
+Get:103 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libx11-xcb1 armhf 2:1.6.7-1 [190 kB]
+Get:104 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-dri2-0 armhf 1.13.1-2 [100 kB]
+Get:105 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-dri3-0 armhf 1.13.1-2 [100 kB]
+Get:106 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-glx0 armhf 1.13.1-2 [114 kB]
+Get:107 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-present0 armhf 1.13.1-2 [99.1 kB]
+Get:108 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-sync1 armhf 1.13.1-2 [102 kB]
+Get:109 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxdamage1 armhf 1:1.1.4-3+b3 [14.3 kB]
+Get:110 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxshmfence1 armhf 1.3-1 [8636 B]
+Get:111 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxxf86vm1 armhf 1:1.1.4-1+b2 [20.1 kB]
+Get:112 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsensors-config all 1:3.5.0-3 [31.6 kB]
+Get:113 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsensors5 armhf 1:3.5.0-3 [49.5 kB]
+Get:114 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libjson-glib-1.0-common all 1.4.4-2 [52.3 kB]
+Get:115 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libjson-glib-1.0-0 armhf 1.4.4-2 [52.7 kB]
+Get:116 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsoup2.4-1 armhf 2.64.2-2 [216 kB]
+Get:117 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsoup-gnome2.4-1 armhf 2.64.2-2 [17.5 kB]
+Get:118 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf librest-0.7-0 armhf 0.8.1-1 [27.8 kB]
+Get:119 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwayland-client0 armhf 1.16.0-1 [21.2 kB]
+Get:120 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwayland-cursor0 armhf 1.16.0-1 [13.0 kB]
+Get:121 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libwayland-egl1 armhf 1.16.0-1 [8008 B]
+Get:122 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcomposite1 armhf 1:0.4.4-2 [16.1 kB]
+Get:123 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcursor1 armhf 1:1.1.15-2 [33.5 kB]
+Get:124 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxinerama1 armhf 2:1.1.4-2 [17.3 kB]
+Get:125 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxkbcommon0 armhf 0.8.2-1 [110 kB]
+Get:126 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxrandr2 armhf 2:1.5.1-1 [34.5 kB]
+Get:127 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libilmbase23 armhf 2.2.1-2 [65.7 kB]
+Get:128 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopenexr23 armhf 2.2.1-4.1 [519 kB]
+Get:129 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvdpau-va-gl1 armhf 0.4.2-1+b1 [59.4 kB]
+Get:130 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-xfixes0 armhf 1.13.1-2 [103 kB]
+Get:131 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf va-driver-all armhf 2.4.0-1 [13.0 kB]
+Get:132 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf vdpau-driver-all armhf 1.1.1-10 [20.8 kB]
+Get:138 http://archive.raspberrypi.org/debian buster/main armhf libgtk-3-0 armhf 3.24.5-1+rpt2 [2136 kB]
+Get:139 http://archive.raspberrypi.org/debian buster/main armhf libgtk-3-bin armhf 3.24.5-1+rpt2 [111 kB]
+Get:140 http://archive.raspberrypi.org/debian buster/main armhf libswscale5 armhf 7:4.1.4-1+rpt7~deb10u1 [244 kB]
+Get:141 http://archive.raspberrypi.org/debian buster/main armhf mesa-va-drivers armhf 19.3.2-1~bpo10+1~rpt1 [1979 kB]
+Get:142 http://archive.raspberrypi.org/debian buster/main armhf mesa-vdpau-drivers armhf 19.3.2-1~bpo10+1~rpt1 [2094 kB]
+Preconfiguring packages ...
+Fetched 70.1 MB in 1min 4s (1094 kB/s)
+Selecting previously unselected package libjasper1:armhf.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 40871 files and directories currently installed.)
+Preparing to unpack .../000-libjasper1_1.900.1-debian1-2.4+deb8u1_armhf.deb ...
+Unpacking libjasper1:armhf (1.900.1-debian1-2.4+deb8u1) ...
+Selecting previously unselected package hicolor-icon-theme.
+Preparing to unpack .../001-hicolor-icon-theme_0.17-2_all.deb ...
+Unpacking hicolor-icon-theme (0.17-2) ...
+Selecting previously unselected package libjbig0:armhf.
+Preparing to unpack .../002-libjbig0_2.1-3.1+b2_armhf.deb ...
+Unpacking libjbig0:armhf (2.1-3.1+b2) ...
+Selecting previously unselected package libwebp6:armhf.
+Preparing to unpack .../003-libwebp6_0.6.1-2_armhf.deb ...
+Unpacking libwebp6:armhf (0.6.1-2) ...
+Selecting previously unselected package libtiff5:armhf.
+Preparing to unpack .../004-libtiff5_4.1.0+git191117-2~deb10u1_armhf.deb ...
+Unpacking libtiff5:armhf (4.1.0+git191117-2~deb10u1) ...
+Selecting previously unselected package libgdk-pixbuf2.0-common.
+Preparing to unpack .../005-libgdk-pixbuf2.0-common_2.38.1+dfsg-1_all.deb ...
+Unpacking libgdk-pixbuf2.0-common (2.38.1+dfsg-1) ...
+Selecting previously unselected package libgdk-pixbuf2.0-0:armhf.
+Preparing to unpack .../006-libgdk-pixbuf2.0-0_2.38.1+dfsg-1_armhf.deb ...
+Unpacking libgdk-pixbuf2.0-0:armhf (2.38.1+dfsg-1) ...
+Selecting previously unselected package gtk-update-icon-cache.
+Preparing to unpack .../007-gtk-update-icon-cache_3.24.5-1+rpt2_armhf.deb ...
+No diversion 'diversion of /usr/sbin/update-icon-caches to /usr/sbin/update-icon-caches.gtk2 by libgtk-3-bin', none removed.
+No diversion 'diversion of /usr/share/man/man8/update-icon-caches.8.gz to /usr/share/man/man8/update-icon-caches.gtk2.8.gz by libgtk-3-bin', none removed.
+Unpacking gtk-update-icon-cache (3.24.5-1+rpt2) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../008-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../009-fontconfig-config_2.13.1-2_all.deb ...
+Unpacking fontconfig-config (2.13.1-2) ...
+Selecting previously unselected package libfontconfig1:armhf.
+Preparing to unpack .../010-libfontconfig1_2.13.1-2_armhf.deb ...
+Unpacking libfontconfig1:armhf (2.13.1-2) ...
+Selecting previously unselected package libpixman-1-0:armhf.
+Preparing to unpack .../011-libpixman-1-0_0.36.0-1+rpt1_armhf.deb ...
+Unpacking libpixman-1-0:armhf (0.36.0-1+rpt1) ...
+Selecting previously unselected package libxcb-render0:armhf.
+Preparing to unpack .../012-libxcb-render0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-render0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxcb-shm0:armhf.
+Preparing to unpack .../013-libxcb-shm0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-shm0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxrender1:armhf.
+Preparing to unpack .../014-libxrender1_1%3a0.9.10-1_armhf.deb ...
+Unpacking libxrender1:armhf (1:0.9.10-1) ...
+Selecting previously unselected package libcairo2:armhf.
+Preparing to unpack .../015-libcairo2_1.16.0-4+rpt1_armhf.deb ...
+Unpacking libcairo2:armhf (1.16.0-4+rpt1) ...
+Selecting previously unselected package libcroco3:armhf.
+Preparing to unpack .../016-libcroco3_0.6.12-3_armhf.deb ...
+Unpacking libcroco3:armhf (0.6.12-3) ...
+Selecting previously unselected package fontconfig.
+Preparing to unpack .../017-fontconfig_2.13.1-2_armhf.deb ...
+Unpacking fontconfig (2.13.1-2) ...
+Selecting previously unselected package libthai-data.
+Preparing to unpack .../018-libthai-data_0.1.28-2_all.deb ...
+Unpacking libthai-data (0.1.28-2) ...
+Selecting previously unselected package libdatrie1:armhf.
+Preparing to unpack .../019-libdatrie1_0.2.12-2_armhf.deb ...
+Unpacking libdatrie1:armhf (0.2.12-2) ...
+Selecting previously unselected package libthai0:armhf.
+Preparing to unpack .../020-libthai0_0.1.28-2_armhf.deb ...
+Unpacking libthai0:armhf (0.1.28-2) ...
+Selecting previously unselected package libpango-1.0-0:armhf.
+Preparing to unpack .../021-libpango-1.0-0_1.42.4-7~deb10u1_armhf.deb ...
+Unpacking libpango-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Selecting previously unselected package libgraphite2-3:armhf.
+Preparing to unpack .../022-libgraphite2-3_1.3.13-7_armhf.deb ...
+Unpacking libgraphite2-3:armhf (1.3.13-7) ...
+Selecting previously unselected package libharfbuzz0b:armhf.
+Preparing to unpack .../023-libharfbuzz0b_2.3.1-1_armhf.deb ...
+Unpacking libharfbuzz0b:armhf (2.3.1-1) ...
+Selecting previously unselected package libpangoft2-1.0-0:armhf.
+Preparing to unpack .../024-libpangoft2-1.0-0_1.42.4-7~deb10u1_armhf.deb ...
+Unpacking libpangoft2-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Selecting previously unselected package libpangocairo-1.0-0:armhf.
+Preparing to unpack .../025-libpangocairo-1.0-0_1.42.4-7~deb10u1_armhf.deb ...
+Unpacking libpangocairo-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Selecting previously unselected package librsvg2-2:armhf.
+Preparing to unpack .../026-librsvg2-2_2.44.10-2.1+rpi1_armhf.deb ...
+Unpacking librsvg2-2:armhf (2.44.10-2.1+rpi1) ...
+Selecting previously unselected package librsvg2-common:armhf.
+Preparing to unpack .../027-librsvg2-common_2.44.10-2.1+rpi1_armhf.deb ...
+Unpacking librsvg2-common:armhf (2.44.10-2.1+rpi1) ...
+Selecting previously unselected package adwaita-icon-theme.
+Preparing to unpack .../028-adwaita-icon-theme_3.30.1-1_all.deb ...
+Unpacking adwaita-icon-theme (3.30.1-1) ...
+Selecting previously unselected package libatspi2.0-0:armhf.
+Preparing to unpack .../029-libatspi2.0-0_2.30.0-7_armhf.deb ...
+Unpacking libatspi2.0-0:armhf (2.30.0-7) ...
+Selecting previously unselected package libxi6:armhf.
+Preparing to unpack .../030-libxi6_2%3a1.7.9-1_armhf.deb ...
+Unpacking libxi6:armhf (2:1.7.9-1) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../031-x11-common_1%3a7.7+19_all.deb ...
+Unpacking x11-common (1:7.7+19) ...
+Selecting previously unselected package libxtst6:armhf.
+Preparing to unpack .../032-libxtst6_2%3a1.2.3-1_armhf.deb ...
+Unpacking libxtst6:armhf (2:1.2.3-1) ...
+Selecting previously unselected package at-spi2-core.
+Preparing to unpack .../033-at-spi2-core_2.30.0-7_armhf.deb ...
+Unpacking at-spi2-core (2.30.0-7) ...
+Selecting previously unselected package dbus-user-session.
+Preparing to unpack .../034-dbus-user-session_1.12.16-1_armhf.deb ...
+Unpacking dbus-user-session (1.12.16-1) ...
+Selecting previously unselected package libdconf1:armhf.
+Preparing to unpack .../035-libdconf1_0.30.1-2_armhf.deb ...
+Unpacking libdconf1:armhf (0.30.1-2) ...
+Selecting previously unselected package dconf-service.
+Preparing to unpack .../036-dconf-service_0.30.1-2_armhf.deb ...
+Unpacking dconf-service (0.30.1-2) ...
+Selecting previously unselected package dconf-gsettings-backend:armhf.
+Preparing to unpack .../037-dconf-gsettings-backend_0.30.1-2_armhf.deb ...
+Unpacking dconf-gsettings-backend:armhf (0.30.1-2) ...
+Selecting previously unselected package libproxy1v5:armhf.
+Preparing to unpack .../038-libproxy1v5_0.4.15-5_armhf.deb ...
+Unpacking libproxy1v5:armhf (0.4.15-5) ...
+Selecting previously unselected package glib-networking-common.
+Preparing to unpack .../039-glib-networking-common_2.58.0-2_all.deb ...
+Unpacking glib-networking-common (2.58.0-2) ...
+Selecting previously unselected package glib-networking-services.
+Preparing to unpack .../040-glib-networking-services_2.58.0-2_armhf.deb ...
+Unpacking glib-networking-services (2.58.0-2) ...
+Selecting previously unselected package gsettings-desktop-schemas.
+Preparing to unpack .../041-gsettings-desktop-schemas_3.28.1-1_all.deb ...
+Unpacking gsettings-desktop-schemas (3.28.1-1) ...
+Selecting previously unselected package glib-networking:armhf.
+Preparing to unpack .../042-glib-networking_2.58.0-2_armhf.deb ...
+Unpacking glib-networking:armhf (2.58.0-2) ...
+Selecting previously unselected package libaacs0:armhf.
+Preparing to unpack .../043-libaacs0_0.9.0-2_armhf.deb ...
+Unpacking libaacs0:armhf (0.9.0-2) ...
+Selecting previously unselected package libaom0:armhf.
+Preparing to unpack .../044-libaom0_1.0.0-3_armhf.deb ...
+Unpacking libaom0:armhf (1.0.0-3) ...
+Selecting previously unselected package libatk1.0-data.
+Preparing to unpack .../045-libatk1.0-data_2.30.0-2_all.deb ...
+Unpacking libatk1.0-data (2.30.0-2) ...
+Selecting previously unselected package libatk1.0-0:armhf.
+Preparing to unpack .../046-libatk1.0-0_2.30.0-2_armhf.deb ...
+Unpacking libatk1.0-0:armhf (2.30.0-2) ...
+Selecting previously unselected package libatk-bridge2.0-0:armhf.
+Preparing to unpack .../047-libatk-bridge2.0-0_2.30.0-5_armhf.deb ...
+Unpacking libatk-bridge2.0-0:armhf (2.30.0-5) ...
+Selecting previously unselected package libavahi-client3:armhf.
+Preparing to unpack .../048-libavahi-client3_0.7-4+b1_armhf.deb ...
+Unpacking libavahi-client3:armhf (0.7-4+b1) ...
+Selecting previously unselected package libdrm-common.
+Preparing to unpack .../049-libdrm-common_2.4.100-4+rpi1~bpo10+1_all.deb ...
+Unpacking libdrm-common (2.4.100-4+rpi1~bpo10+1) ...
+Selecting previously unselected package libdrm2:armhf.
+Preparing to unpack .../050-libdrm2_2.4.100-4+rpi1~bpo10+1_armhf.deb ...
+Unpacking libdrm2:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Selecting previously unselected package libva2:armhf.
+Preparing to unpack .../051-libva2_2.4.0-1_armhf.deb ...
+Unpacking libva2:armhf (2.4.0-1) ...
+Selecting previously unselected package libva-drm2:armhf.
+Preparing to unpack .../052-libva-drm2_2.4.0-1_armhf.deb ...
+Unpacking libva-drm2:armhf (2.4.0-1) ...
+Selecting previously unselected package libxfixes3:armhf.
+Preparing to unpack .../053-libxfixes3_1%3a5.0.3-1_armhf.deb ...
+Unpacking libxfixes3:armhf (1:5.0.3-1) ...
+Selecting previously unselected package libva-x11-2:armhf.
+Preparing to unpack .../054-libva-x11-2_2.4.0-1_armhf.deb ...
+Unpacking libva-x11-2:armhf (2.4.0-1) ...
+Selecting previously unselected package libvdpau1:armhf.
+Preparing to unpack .../055-libvdpau1_1.1.1-10_armhf.deb ...
+Unpacking libvdpau1:armhf (1.1.1-10) ...
+Selecting previously unselected package libavutil56:armhf.
+Preparing to unpack .../056-libavutil56_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libavutil56:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libcodec2-0.8.1:armhf.
+Preparing to unpack .../057-libcodec2-0.8.1_0.8.1-2_armhf.deb ...
+Unpacking libcodec2-0.8.1:armhf (0.8.1-2) ...
+Selecting previously unselected package libgsm1:armhf.
+Preparing to unpack .../058-libgsm1_1.0.18-2_armhf.deb ...
+Unpacking libgsm1:armhf (1.0.18-2) ...
+Selecting previously unselected package libmp3lame0:armhf.
+Preparing to unpack .../059-libmp3lame0_3.100-2+b1_armhf.deb ...
+Unpacking libmp3lame0:armhf (3.100-2+b1) ...
+Selecting previously unselected package libopenjp2-7:armhf.
+Preparing to unpack .../060-libopenjp2-7_2.3.0-2+deb10u1_armhf.deb ...
+Unpacking libopenjp2-7:armhf (2.3.0-2+deb10u1) ...
+Selecting previously unselected package libopus0:armhf.
+Preparing to unpack .../061-libopus0_1.3-1_armhf.deb ...
+Unpacking libopus0:armhf (1.3-1) ...
+Selecting previously unselected package libshine3:armhf.
+Preparing to unpack .../062-libshine3_3.1.1-2+b1_armhf.deb ...
+Unpacking libshine3:armhf (3.1.1-2+b1) ...
+Selecting previously unselected package libsnappy1v5:armhf.
+Preparing to unpack .../063-libsnappy1v5_1.1.7-1_armhf.deb ...
+Unpacking libsnappy1v5:armhf (1.1.7-1) ...
+Selecting previously unselected package libspeex1:armhf.
+Preparing to unpack .../064-libspeex1_1.2~rc1.2-1+b2_armhf.deb ...
+Unpacking libspeex1:armhf (1.2~rc1.2-1+b2) ...
+Selecting previously unselected package libsoxr0:armhf.
+Preparing to unpack .../065-libsoxr0_0.1.2-3_armhf.deb ...
+Unpacking libsoxr0:armhf (0.1.2-3) ...
+Selecting previously unselected package libswresample3:armhf.
+Preparing to unpack .../066-libswresample3_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libswresample3:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libogg0:armhf.
+Preparing to unpack .../067-libogg0_1.3.2-1+b2_armhf.deb ...
+Unpacking libogg0:armhf (1.3.2-1+b2) ...
+Selecting previously unselected package libtheora0:armhf.
+Preparing to unpack .../068-libtheora0_1.1.1+dfsg.1-15_armhf.deb ...
+Unpacking libtheora0:armhf (1.1.1+dfsg.1-15) ...
+Selecting previously unselected package libtwolame0:armhf.
+Preparing to unpack .../069-libtwolame0_0.3.13-4_armhf.deb ...
+Unpacking libtwolame0:armhf (0.3.13-4) ...
+Selecting previously unselected package libvorbis0a:armhf.
+Preparing to unpack .../070-libvorbis0a_1.3.6-2_armhf.deb ...
+Unpacking libvorbis0a:armhf (1.3.6-2) ...
+Selecting previously unselected package libvorbisenc2:armhf.
+Preparing to unpack .../071-libvorbisenc2_1.3.6-2_armhf.deb ...
+Unpacking libvorbisenc2:armhf (1.3.6-2) ...
+Selecting previously unselected package libvpx5:armhf.
+Preparing to unpack .../072-libvpx5_1.7.0-3+deb10u1_armhf.deb ...
+Unpacking libvpx5:armhf (1.7.0-3+deb10u1) ...
+Selecting previously unselected package libwavpack1:armhf.
+Preparing to unpack .../073-libwavpack1_5.1.0-6_armhf.deb ...
+Unpacking libwavpack1:armhf (5.1.0-6) ...
+Selecting previously unselected package libwebpmux3:armhf.
+Preparing to unpack .../074-libwebpmux3_0.6.1-2_armhf.deb ...
+Unpacking libwebpmux3:armhf (0.6.1-2) ...
+Selecting previously unselected package libx264-155:armhf.
+Preparing to unpack .../075-libx264-155_2%3a0.155.2917+git0a84d98-2+rpi1_armhf.deb ...
+Unpacking libx264-155:armhf (2:0.155.2917+git0a84d98-2+rpi1) ...
+Selecting previously unselected package libx265-165:armhf.
+Preparing to unpack .../076-libx265-165_2.9-4_armhf.deb ...
+Unpacking libx265-165:armhf (2.9-4) ...
+Selecting previously unselected package libxvidcore4:armhf.
+Preparing to unpack .../077-libxvidcore4_2%3a1.3.5-1_armhf.deb ...
+Unpacking libxvidcore4:armhf (2:1.3.5-1) ...
+Selecting previously unselected package libzvbi-common.
+Preparing to unpack .../078-libzvbi-common_0.2.35-16_all.deb ...
+Unpacking libzvbi-common (0.2.35-16) ...
+Selecting previously unselected package libzvbi0:armhf.
+Preparing to unpack .../079-libzvbi0_0.2.35-16_armhf.deb ...
+Unpacking libzvbi0:armhf (0.2.35-16) ...
+Selecting previously unselected package libavcodec58:armhf.
+Preparing to unpack .../080-libavcodec58_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libavcodec58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libbluray2:armhf.
+Preparing to unpack .../081-libbluray2_1%3a1.1.0-1_armhf.deb ...
+Unpacking libbluray2:armhf (1:1.1.0-1) ...
+Selecting previously unselected package libchromaprint1:armhf.
+Preparing to unpack .../082-libchromaprint1_1.4.3-3_armhf.deb ...
+Unpacking libchromaprint1:armhf (1.4.3-3) ...
+Selecting previously unselected package libgme0:armhf.
+Preparing to unpack .../083-libgme0_0.6.2-1_armhf.deb ...
+Unpacking libgme0:armhf (0.6.2-1) ...
+Selecting previously unselected package libmpg123-0:armhf.
+Preparing to unpack .../084-libmpg123-0_1.25.10-2_armhf.deb ...
+Unpacking libmpg123-0:armhf (1.25.10-2) ...
+Selecting previously unselected package libvorbisfile3:armhf.
+Preparing to unpack .../085-libvorbisfile3_1.3.6-2_armhf.deb ...
+Unpacking libvorbisfile3:armhf (1.3.6-2) ...
+Selecting previously unselected package libopenmpt0:armhf.
+Preparing to unpack .../086-libopenmpt0_0.4.3-1_armhf.deb ...
+Unpacking libopenmpt0:armhf (0.4.3-1) ...
+Selecting previously unselected package libssh-gcrypt-4:armhf.
+Preparing to unpack .../087-libssh-gcrypt-4_0.8.7-1_armhf.deb ...
+Unpacking libssh-gcrypt-4:armhf (0.8.7-1) ...
+Selecting previously unselected package libavformat58:armhf.
+Preparing to unpack .../088-libavformat58_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libavformat58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libbdplus0:armhf.
+Preparing to unpack .../089-libbdplus0_0.1.2-3_armhf.deb ...
+Unpacking libbdplus0:armhf (0.1.2-3) ...
+Selecting previously unselected package libcairo-gobject2:armhf.
+Preparing to unpack .../090-libcairo-gobject2_1.16.0-4+rpt1_armhf.deb ...
+Unpacking libcairo-gobject2:armhf (1.16.0-4+rpt1) ...
+Selecting previously unselected package liblcms2-2:armhf.
+Preparing to unpack .../091-liblcms2-2_2.9-3_armhf.deb ...
+Unpacking liblcms2-2:armhf (2.9-3) ...
+Selecting previously unselected package libcolord2:armhf.
+Preparing to unpack .../092-libcolord2_1.4.3-4_armhf.deb ...
+Unpacking libcolord2:armhf (1.4.3-4) ...
+Selecting previously unselected package libcups2:armhf.
+Preparing to unpack .../093-libcups2_2.2.10-6+deb10u2_armhf.deb ...
+Unpacking libcups2:armhf (2.2.10-6+deb10u2) ...
+Selecting previously unselected package libdrm-amdgpu1:armhf.
+Preparing to unpack .../094-libdrm-amdgpu1_2.4.100-4+rpi1~bpo10+1_armhf.deb ...
+Unpacking libdrm-amdgpu1:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Selecting previously unselected package libdrm-nouveau2:armhf.
+Preparing to unpack .../095-libdrm-nouveau2_2.4.100-4+rpi1~bpo10+1_armhf.deb ...
+Unpacking libdrm-nouveau2:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Selecting previously unselected package libdrm-radeon1:armhf.
+Preparing to unpack .../096-libdrm-radeon1_2.4.100-4+rpi1~bpo10+1_armhf.deb ...
+Unpacking libdrm-radeon1:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Selecting previously unselected package libepoxy0:armhf.
+Preparing to unpack .../097-libepoxy0_1.5.3-0.1_armhf.deb ...
+Unpacking libepoxy0:armhf (1.5.3-0.1) ...
+Selecting previously unselected package libgdk-pixbuf2.0-bin.
+Preparing to unpack .../098-libgdk-pixbuf2.0-bin_2.38.1+dfsg-1_armhf.deb ...
+Unpacking libgdk-pixbuf2.0-bin (2.38.1+dfsg-1) ...
+Selecting previously unselected package libglvnd0:armhf.
+Preparing to unpack .../099-libglvnd0_1.3.0-7~bpo10+1_armhf.deb ...
+Unpacking libglvnd0:armhf (1.3.0-7~bpo10+1) ...
+Selecting previously unselected package libglapi-mesa:armhf.
+Preparing to unpack .../100-libglapi-mesa_19.3.2-1~bpo10+1~rpt1_armhf.deb ...
+Unpacking libglapi-mesa:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Selecting previously unselected package libx11-xcb1:armhf.
+Preparing to unpack .../101-libx11-xcb1_2%3a1.6.7-1_armhf.deb ...
+Unpacking libx11-xcb1:armhf (2:1.6.7-1) ...
+Selecting previously unselected package libxcb-dri2-0:armhf.
+Preparing to unpack .../102-libxcb-dri2-0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-dri2-0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxcb-dri3-0:armhf.
+Preparing to unpack .../103-libxcb-dri3-0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-dri3-0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxcb-glx0:armhf.
+Preparing to unpack .../104-libxcb-glx0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-glx0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxcb-present0:armhf.
+Preparing to unpack .../105-libxcb-present0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-present0:armhf (1.13.1-2) ...
+Selecting previously unselected package libxcb-sync1:armhf.
+Preparing to unpack .../106-libxcb-sync1_1.13.1-2_armhf.deb ...
+Unpacking libxcb-sync1:armhf (1.13.1-2) ...
+Selecting previously unselected package libxdamage1:armhf.
+Preparing to unpack .../107-libxdamage1_1%3a1.1.4-3+b3_armhf.deb ...
+Unpacking libxdamage1:armhf (1:1.1.4-3+b3) ...
+Selecting previously unselected package libxshmfence1:armhf.
+Preparing to unpack .../108-libxshmfence1_1.3-1_armhf.deb ...
+Unpacking libxshmfence1:armhf (1.3-1) ...
+Selecting previously unselected package libxxf86vm1:armhf.
+Preparing to unpack .../109-libxxf86vm1_1%3a1.1.4-1+b2_armhf.deb ...
+Unpacking libxxf86vm1:armhf (1:1.1.4-1+b2) ...
+Selecting previously unselected package libllvm9:armhf.
+Preparing to unpack .../110-libllvm9_1%3a9.0.1-6+rpi1~bpo10+1_armhf.deb ...
+Unpacking libllvm9:armhf (1:9.0.1-6+rpi1~bpo10+1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../111-libsensors-config_1%3a3.5.0-3_all.deb ...
+Unpacking libsensors-config (1:3.5.0-3) ...
+Selecting previously unselected package libsensors5:armhf.
+Preparing to unpack .../112-libsensors5_1%3a3.5.0-3_armhf.deb ...
+Unpacking libsensors5:armhf (1:3.5.0-3) ...
+Selecting previously unselected package libgl1-mesa-dri:armhf.
+Preparing to unpack .../113-libgl1-mesa-dri_19.3.2-1~bpo10+1~rpt1_armhf.deb ...
+Unpacking libgl1-mesa-dri:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Selecting previously unselected package libglx-mesa0:armhf.
+Preparing to unpack .../114-libglx-mesa0_19.3.2-1~bpo10+1~rpt1_armhf.deb ...
+Unpacking libglx-mesa0:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Selecting previously unselected package libglx0:armhf.
+Preparing to unpack .../115-libglx0_1.3.0-7~bpo10+1_armhf.deb ...
+Unpacking libglx0:armhf (1.3.0-7~bpo10+1) ...
+Selecting previously unselected package libgl1:armhf.
+Preparing to unpack .../116-libgl1_1.3.0-7~bpo10+1_armhf.deb ...
+Unpacking libgl1:armhf (1.3.0-7~bpo10+1) ...
+Selecting previously unselected package libjson-glib-1.0-common.
+Preparing to unpack .../117-libjson-glib-1.0-common_1.4.4-2_all.deb ...
+Unpacking libjson-glib-1.0-common (1.4.4-2) ...
+Selecting previously unselected package libjson-glib-1.0-0:armhf.
+Preparing to unpack .../118-libjson-glib-1.0-0_1.4.4-2_armhf.deb ...
+Unpacking libjson-glib-1.0-0:armhf (1.4.4-2) ...
+Selecting previously unselected package libsoup2.4-1:armhf.
+Preparing to unpack .../119-libsoup2.4-1_2.64.2-2_armhf.deb ...
+Unpacking libsoup2.4-1:armhf (2.64.2-2) ...
+Selecting previously unselected package libsoup-gnome2.4-1:armhf.
+Preparing to unpack .../120-libsoup-gnome2.4-1_2.64.2-2_armhf.deb ...
+Unpacking libsoup-gnome2.4-1:armhf (2.64.2-2) ...
+Selecting previously unselected package librest-0.7-0:armhf.
+Preparing to unpack .../121-librest-0.7-0_0.8.1-1_armhf.deb ...
+Unpacking librest-0.7-0:armhf (0.8.1-1) ...
+Selecting previously unselected package libwayland-client0:armhf.
+Preparing to unpack .../122-libwayland-client0_1.16.0-1_armhf.deb ...
+Unpacking libwayland-client0:armhf (1.16.0-1) ...
+Selecting previously unselected package libwayland-cursor0:armhf.
+Preparing to unpack .../123-libwayland-cursor0_1.16.0-1_armhf.deb ...
+Unpacking libwayland-cursor0:armhf (1.16.0-1) ...
+Selecting previously unselected package libwayland-egl1:armhf.
+Preparing to unpack .../124-libwayland-egl1_1.16.0-1_armhf.deb ...
+Unpacking libwayland-egl1:armhf (1.16.0-1) ...
+Selecting previously unselected package libxcomposite1:armhf.
+Preparing to unpack .../125-libxcomposite1_1%3a0.4.4-2_armhf.deb ...
+Unpacking libxcomposite1:armhf (1:0.4.4-2) ...
+Selecting previously unselected package libxcursor1:armhf.
+Preparing to unpack .../126-libxcursor1_1%3a1.1.15-2_armhf.deb ...
+Unpacking libxcursor1:armhf (1:1.1.15-2) ...
+Selecting previously unselected package libxinerama1:armhf.
+Preparing to unpack .../127-libxinerama1_2%3a1.1.4-2_armhf.deb ...
+Unpacking libxinerama1:armhf (2:1.1.4-2) ...
+Selecting previously unselected package libxkbcommon0:armhf.
+Preparing to unpack .../128-libxkbcommon0_0.8.2-1_armhf.deb ...
+Unpacking libxkbcommon0:armhf (0.8.2-1) ...
+Selecting previously unselected package libxrandr2:armhf.
+Preparing to unpack .../129-libxrandr2_2%3a1.5.1-1_armhf.deb ...
+Unpacking libxrandr2:armhf (2:1.5.1-1) ...
+Selecting previously unselected package libgtk-3-common.
+Preparing to unpack .../130-libgtk-3-common_3.24.5-1+rpt2_all.deb ...
+Unpacking libgtk-3-common (3.24.5-1+rpt2) ...
+^[[CSelecting previously unselected package libgtk-3-0:armhf.
+Preparing to unpack .../131-libgtk-3-0_3.24.5-1+rpt2_armhf.deb ...
+Unpacking libgtk-3-0:armhf (3.24.5-1+rpt2) ...
+Selecting previously unselected package libgtk-3-bin.
+Preparing to unpack .../132-libgtk-3-bin_3.24.5-1+rpt2_armhf.deb ...
+Unpacking libgtk-3-bin (3.24.5-1+rpt2) ...
+Selecting previously unselected package libilmbase23:armhf.
+Preparing to unpack .../133-libilmbase23_2.2.1-2_armhf.deb ...
+Unpacking libilmbase23:armhf (2.2.1-2) ...
+Selecting previously unselected package libopenexr23:armhf.
+Preparing to unpack .../134-libopenexr23_2.2.1-4.1_armhf.deb ...
+Unpacking libopenexr23:armhf (2.2.1-4.1) ...
+Selecting previously unselected package libswscale5:armhf.
+Preparing to unpack .../135-libswscale5_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libswscale5:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libvdpau-va-gl1:armhf.
+Preparing to unpack .../136-libvdpau-va-gl1_0.4.2-1+b1_armhf.deb ...
+Unpacking libvdpau-va-gl1:armhf (0.4.2-1+b1) ...
+Selecting previously unselected package libxcb-xfixes0:armhf.
+Preparing to unpack .../137-libxcb-xfixes0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-xfixes0:armhf (1.13.1-2) ...
+Selecting previously unselected package mesa-va-drivers:armhf.
+Preparing to unpack .../138-mesa-va-drivers_19.3.2-1~bpo10+1~rpt1_armhf.deb ...
+Unpacking mesa-va-drivers:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Selecting previously unselected package mesa-vdpau-drivers:armhf.
+Preparing to unpack .../139-mesa-vdpau-drivers_19.3.2-1~bpo10+1~rpt1_armhf.deb ...
+Unpacking mesa-vdpau-drivers:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Selecting previously unselected package va-driver-all:armhf.
+Preparing to unpack .../140-va-driver-all_2.4.0-1_armhf.deb ...
+Unpacking va-driver-all:armhf (2.4.0-1) ...
+Selecting previously unselected package vdpau-driver-all:armhf.
+Preparing to unpack .../141-vdpau-driver-all_1.1.1-10_armhf.deb ...
+Unpacking vdpau-driver-all:armhf (1.1.1-10) ...
+Setting up libgme0:armhf (0.6.2-1) ...
+Setting up libssh-gcrypt-4:armhf (0.8.7-1) ...
+Setting up libgraphite2-3:armhf (1.3.13-7) ...
+Setting up libxcb-dri3-0:armhf (1.13.1-2) ...
+Setting up liblcms2-2:armhf (2.9-3) ...
+Setting up libpixman-1-0:armhf (0.36.0-1+rpt1) ...
+Setting up libx11-xcb1:armhf (2:1.6.7-1) ...
+Setting up libproxy1v5:armhf (0.4.15-5) ...
+Setting up libmpg123-0:armhf (1.25.10-2) ...
+Setting up libxcb-xfixes0:armhf (1.13.1-2) ...
+Setting up libogg0:armhf (1.3.2-1+b2) ...
+Setting up libspeex1:armhf (1.2~rc1.2-1+b2) ...
+Setting up libshine3:armhf (3.1.1-2+b1) ...
+Setting up hicolor-icon-theme (0.17-2) ...
+Setting up libxi6:armhf (2:1.7.9-1) ...
+Setting up libtwolame0:armhf (0.3.13-4) ...
+Setting up libxrender1:armhf (1:0.9.10-1) ...
+Setting up libdatrie1:armhf (0.2.12-2) ...
+Setting up libgsm1:armhf (1.0.18-2) ...
+Setting up libx264-155:armhf (2:0.155.2917+git0a84d98-2+rpi1) ...
+Setting up libxcb-render0:armhf (1.13.1-2) ...
+Setting up libsoxr0:armhf (0.1.2-3) ...
+Setting up libx265-165:armhf (2.9-4) ...
+Setting up libilmbase23:armhf (2.2.1-2) ...
+Setting up libglvnd0:armhf (1.3.0-7~bpo10+1) ...
+Setting up libxcb-glx0:armhf (1.13.1-2) ...
+Setting up libaom0:armhf (1.0.0-3) ...
+Setting up libgdk-pixbuf2.0-common (2.38.1+dfsg-1) ...
+Setting up libcodec2-0.8.1:armhf (0.8.1-2) ...
+Setting up x11-common (1:7.7+19) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libsensors-config (1:3.5.0-3) ...
+Setting up libopenexr23:armhf (2.2.1-4.1) ...
+Setting up libxcb-shm0:armhf (1.13.1-2) ...
+Setting up libatspi2.0-0:armhf (2.30.0-7) ...
+Setting up libxvidcore4:armhf (2:1.3.5-1) ...
+Setting up libjbig0:armhf (2.1-3.1+b2) ...
+Setting up libcolord2:armhf (1.4.3-4) ...
+Setting up libxxf86vm1:armhf (1:1.1.4-1+b2) ...
+Setting up libsnappy1v5:armhf (1.1.7-1) ...
+Setting up libxcb-present0:armhf (1.13.1-2) ...
+Setting up libdconf1:armhf (0.30.1-2) ...
+Setting up dbus-user-session (1.12.16-1) ...
+Setting up libva2:armhf (2.4.0-1) ...
+Setting up libepoxy0:armhf (1.5.3-0.1) ...
+Setting up libxfixes3:armhf (1:5.0.3-1) ...
+Setting up libxcb-sync1:armhf (1.13.1-2) ...
+Setting up libopus0:armhf (1.3-1) ...
+Setting up libxinerama1:armhf (2:1.1.4-2) ...
+Setting up libvorbis0a:armhf (1.3.6-2) ...
+Setting up libxrandr2:armhf (2:1.5.1-1) ...
+Setting up libwebp6:armhf (0.6.1-2) ...
+Setting up libcroco3:armhf (0.6.12-3) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libsensors5:armhf (1:3.5.0-3) ...
+Setting up libaacs0:armhf (0.9.0-2) ...
+Setting up libglapi-mesa:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Setting up libxcb-dri2-0:armhf (1.13.1-2) ...
+Setting up libatk1.0-data (2.30.0-2) ...
+Setting up libbdplus0:armhf (0.1.2-3) ...
+Setting up libjasper1:armhf (1.900.1-debian1-2.4+deb8u1) ...
+Setting up libxshmfence1:armhf (1.3-1) ...
+Setting up libvdpau1:armhf (1.1.1-10) ...
+Setting up libwavpack1:armhf (5.1.0-6) ...
+Setting up libopenjp2-7:armhf (2.3.0-2+deb10u1) ...
+Setting up libharfbuzz0b:armhf (2.3.1-1) ...
+Setting up libthai-data (0.1.28-2) ...
+Setting up libjson-glib-1.0-common (1.4.4-2) ...
+Setting up libatk1.0-0:armhf (2.30.0-2) ...
+Setting up libtiff5:armhf (4.1.0+git191117-2~deb10u1) ...
+Setting up libwayland-egl1:armhf (1.16.0-1) ...
+Setting up glib-networking-common (2.58.0-2) ...
+Setting up libwebpmux3:armhf (0.6.1-2) ...
+Setting up libdrm-common (2.4.100-4+rpi1~bpo10+1) ...
+Setting up libxcomposite1:armhf (1:0.4.4-2) ...
+Setting up libavahi-client3:armhf (0.7-4+b1) ...
+Setting up libllvm9:armhf (1:9.0.1-6+rpi1~bpo10+1) ...
+Setting up libzvbi-common (0.2.35-16) ...
+Setting up libmp3lame0:armhf (3.100-2+b1) ...
+Setting up libvpx5:armhf (1.7.0-3+deb10u1) ...
+Setting up libvorbisenc2:armhf (1.3.6-2) ...
+Setting up libxkbcommon0:armhf (0.8.2-1) ...
+Setting up libwayland-client0:armhf (1.16.0-1) ...
+Setting up glib-networking-services (2.58.0-2) ...
+Setting up libzvbi0:armhf (0.2.35-16) ...
+Setting up libxdamage1:armhf (1:1.1.4-3+b3) ...
+Setting up fontconfig-config (2.13.1-2) ...
+Setting up libxtst6:armhf (2:1.2.3-1) ...
+Setting up libxcursor1:armhf (1:1.1.15-2) ...
+Setting up dconf-service (0.30.1-2) ...
+Setting up libjson-glib-1.0-0:armhf (1.4.4-2) ...
+Setting up libatk-bridge2.0-0:armhf (2.30.0-5) ...
+Setting up libthai0:armhf (0.1.28-2) ...
+Setting up libvorbisfile3:armhf (1.3.6-2) ...
+Setting up libgdk-pixbuf2.0-0:armhf (2.38.1+dfsg-1) ...
+Setting up libcups2:armhf (2.2.10-6+deb10u2) ...
+Setting up libdrm2:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Setting up libva-drm2:armhf (2.4.0-1) ...
+Setting up at-spi2-core (2.30.0-7) ...
+Setting up libgdk-pixbuf2.0-bin (2.38.1+dfsg-1) ...
+Setting up libwayland-cursor0:armhf (1.16.0-1) ...
+Setting up libfontconfig1:armhf (2.13.1-2) ...
+Setting up libbluray2:armhf (1:1.1.0-1) ...
+Setting up libva-x11-2:armhf (2.4.0-1) ...
+Setting up libopenmpt0:armhf (0.4.3-1) ...
+Setting up libdrm-amdgpu1:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Setting up gtk-update-icon-cache (3.24.5-1+rpt2) ...
+Setting up fontconfig (2.13.1-2) ...
+Regenerating fonts cache... done.
+Setting up libdrm-nouveau2:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Setting up dconf-gsettings-backend:armhf (0.30.1-2) ...
+Setting up libdrm-radeon1:armhf (2.4.100-4+rpi1~bpo10+1) ...
+Setting up libpango-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Setting up libgl1-mesa-dri:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Setting up libcairo2:armhf (1.16.0-4+rpt1) ...
+Setting up libavutil56:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up libtheora0:armhf (1.1.1+dfsg.1-15) ...
+Setting up libswscale5:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up libcairo-gobject2:armhf (1.16.0-4+rpt1) ...
+Setting up mesa-va-drivers:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Setting up libpangoft2-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Setting up libgtk-3-common (3.24.5-1+rpt2) ...
+Setting up libpangocairo-1.0-0:armhf (1.42.4-7~deb10u1) ...
+Setting up gsettings-desktop-schemas (3.28.1-1) ...
+Setting up mesa-vdpau-drivers:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Setting up libglx-mesa0:armhf (19.3.2-1~bpo10+1~rpt1) ...
+Setting up libglx0:armhf (1.3.0-7~bpo10+1) ...
+Setting up libswresample3:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up librsvg2-2:armhf (2.44.10-2.1+rpi1) ...
+Setting up libgl1:armhf (1.3.0-7~bpo10+1) ...
+Setting up va-driver-all:armhf (2.4.0-1) ...
+Setting up librsvg2-common:armhf (2.44.10-2.1+rpi1) ...
+Setting up libavcodec58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up libvdpau-va-gl1:armhf (0.4.2-1+b1) ...
+Setting up libchromaprint1:armhf (1.4.3-3) ...
+Setting up libavformat58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up adwaita-icon-theme (3.30.1-1) ...
+update-alternatives: using /usr/share/icons/Adwaita/cursor.theme to provide /usr/share/icons/default/index.theme (x-cursor-theme) in auto mode
+Setting up vdpau-driver-all:armhf (1.1.1-10) ...
+Processing triggers for libglib2.0-0:armhf (2.58.3-2+deb10u2) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
+Processing triggers for systemd (241-7~deb10u2+rpi1) ...
+Processing triggers for man-db (2.8.5-2) ...
+Setting up glib-networking:armhf (2.58.0-2) ...
+Setting up libsoup2.4-1:armhf (2.64.2-2) ...
+Setting up libsoup-gnome2.4-1:armhf (2.64.2-2) ...
+Setting up librest-0.7-0:armhf (0.8.1-1) ...
+Setting up libgtk-3-0:armhf (3.24.5-1+rpt2) ...
+Setting up libgtk-3-bin (3.24.5-1+rpt2) ...
+Processing triggers for libgdk-pixbuf2.0-0:armhf (2.38.1+dfsg-1) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
++ apt-get install -y python3-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  dh-python libexpat1-dev libpython3-dev libpython3.7-dev python3-distutils
+  python3-lib2to3 python3.7-dev
+The following NEW packages will be installed:
+  dh-python libexpat1-dev libpython3-dev libpython3.7-dev python3-dev
+  python3-distutils python3-lib2to3 python3.7-dev
+0 upgraded, 8 newly installed, 0 to remove and 26 not upgraded.
+Need to get 48.2 MB of archives.
+After this operation, 73.8 MB of additional disk space will be used.
+Get:1 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf python3-lib2to3 all 3.7.3-1 [76.7 kB]
+Get:2 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf python3-distutils all 3.7.3-1 [142 kB]
+Get:3 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf dh-python all 3.20190308 [99.3 kB]
+Get:8 http://raspbian.raspberrypi.org/raspbian buster/main armhf python3-dev armhf 3.7.3-1 [1264 B]
+Get:4 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libexpat1-dev armhf 2.2.6-2+deb10u1 [127 kB]
+Get:5 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpython3.7-dev armhf 3.7.3-2+deb10u1 [47.2 MB]
+Get:6 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpython3-dev armhf 3.7.3-1 [20.1 kB]
+Get:7 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf python3.7-dev armhf 3.7.3-2+deb10u1 [522 kB]
+Fetched 48.2 MB in 31s (1563 kB/s)
+Selecting previously unselected package python3-lib2to3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 49015 files and directories currently installed.)
+Preparing to unpack .../0-python3-lib2to3_3.7.3-1_all.deb ...
+Unpacking python3-lib2to3 (3.7.3-1) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../1-python3-distutils_3.7.3-1_all.deb ...
+Unpacking python3-distutils (3.7.3-1) ...
+Selecting previously unselected package dh-python.
+Preparing to unpack .../2-dh-python_3.20190308_all.deb ...
+Unpacking dh-python (3.20190308) ...
+Selecting previously unselected package libexpat1-dev:armhf.
+Preparing to unpack .../3-libexpat1-dev_2.2.6-2+deb10u1_armhf.deb ...
+Unpacking libexpat1-dev:armhf (2.2.6-2+deb10u1) ...
+Selecting previously unselected package libpython3.7-dev:armhf.
+Preparing to unpack .../4-libpython3.7-dev_3.7.3-2+deb10u1_armhf.deb ...
+Unpacking libpython3.7-dev:armhf (3.7.3-2+deb10u1) ...
+Selecting previously unselected package libpython3-dev:armhf.
+Preparing to unpack .../5-libpython3-dev_3.7.3-1_armhf.deb ...
+Unpacking libpython3-dev:armhf (3.7.3-1) ...
+Selecting previously unselected package python3.7-dev.
+Preparing to unpack .../6-python3.7-dev_3.7.3-2+deb10u1_armhf.deb ...
+Unpacking python3.7-dev (3.7.3-2+deb10u1) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../7-python3-dev_3.7.3-1_armhf.deb ...
+Unpacking python3-dev (3.7.3-1) ...
+Setting up libexpat1-dev:armhf (2.2.6-2+deb10u1) ...
+Setting up python3-lib2to3 (3.7.3-1) ...
+Setting up python3-distutils (3.7.3-1) ...
+Setting up dh-python (3.20190308) ...
+Setting up libpython3.7-dev:armhf (3.7.3-2+deb10u1) ...
+Setting up python3.7-dev (3.7.3-2+deb10u1) ...
+Setting up libpython3-dev:armhf (3.7.3-1) ...
+Setting up python3-dev (3.7.3-1) ...
+Processing triggers for man-db (2.8.5-2) ...
++ apt-get install -y gpac
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  gpac-modules-base liba52-0.7.4 libass9 libasyncns0 libavc1394-0
+  libavdevice58 libavfilter7 libbs2b0 libcaca0 libcdio-cdda2 libcdio-paranoia2
+  libcdio18 libdc1394-22 libfaad2 libfftw3-double3 libflac8 libflite1
+  libfreenect0.5 libglu1-mesa libgpac4 libice6 libiec61883-0 libjack-jackd2-0
+  liblilv-0-0 libmad0 libmysofa0 libnorm1 libopenal-data libopenal1
+  libpgm-5.2-0 libpostproc55 libpulse0 libraw1394-11 librubberband2
+  libsdl1.2debian libsdl2-2.0-0 libserd-0-0 libsm6 libsndfile1 libsndio7.0
+  libsodium23 libsord-0-0 libsratom-0-0 libvidstab1.1 libxcb-shape0 libxss1
+  libxv1 libzmq5
+Suggested packages:
+  libfftw3-bin libfftw3-dev jackd2 libportaudio2 pulseaudio libraw1394-doc
+  serdi sndiod sordi
+The following NEW packages will be installed:
+  gpac gpac-modules-base liba52-0.7.4 libass9 libasyncns0 libavc1394-0
+  libavdevice58 libavfilter7 libbs2b0 libcaca0 libcdio-cdda2 libcdio-paranoia2
+  libcdio18 libdc1394-22 libfaad2 libfftw3-double3 libflac8 libflite1
+  libfreenect0.5 libglu1-mesa libgpac4 libice6 libiec61883-0 libjack-jackd2-0
+  liblilv-0-0 libmad0 libmysofa0 libnorm1 libopenal-data libopenal1
+  libpgm-5.2-0 libpostproc55 libpulse0 libraw1394-11 librubberband2
+  libsdl1.2debian libsdl2-2.0-0 libserd-0-0 libsm6 libsndfile1 libsndio7.0
+  libsodium23 libsord-0-0 libsratom-0-0 libvidstab1.1 libxcb-shape0 libxss1
+  libxv1 libzmq5
+0 upgraded, 49 newly installed, 0 to remove and 26 not upgraded.
+Need to get 20.8 MB of archives.
+After this operation, 44.7 MB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian buster/main armhf libsdl1.2debian armhf 1.2.15+dfsg2-4+rpt2 [168 kB]
+Get:5 http://archive.raspberrypi.org/debian buster/main armhf libpostproc55 armhf 7:4.1.4-1+rpt7~deb10u1 [86.0 kB]
+Get:6 http://archive.raspberrypi.org/debian buster/main armhf libavfilter7 armhf 7:4.1.4-1+rpt7~deb10u1 [1447 kB]
+Get:8 http://archive.raspberrypi.org/debian buster/main armhf libsdl2-2.0-0 armhf 2.0.9+dfsg1-1+rpt1 [334 kB]
+Get:2 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libglu1-mesa armhf 9.0.0-2.1 [130 kB]
+Get:9 http://archive.raspberrypi.org/debian buster/main armhf libavdevice58 armhf 7:4.1.4-1+rpt7~deb10u1 [137 kB]
+Get:3 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libgpac4 armhf 0.5.2-426-gc5ad4e4+dfsg5-5 [1287 kB]
+Get:4 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf liba52-0.7.4 armhf 0.7.4-19 [29.8 kB]
+Get:7 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libfaad2 armhf 2.8.8-3 [144 kB]
+Get:10 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libfreenect0.5 armhf 1:0.5.3-1 [38.2 kB]
+Get:11 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libjack-jackd2-0 armhf 1.9.12~dfsg-2 [252 kB]
+Get:12 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libmad0 armhf 0.15.1b-10 [66.0 kB]
+Get:13 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libasyncns0 armhf 0.8-6 [11.8 kB]
+Get:14 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libice6 armhf 2:1.0.9-2 [51.6 kB]
+Get:15 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsm6 armhf 2:1.2.3-1 [32.9 kB]
+Get:16 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libflac8 armhf 1.3.2-3 [148 kB]
+Get:17 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsndfile1 armhf 1.0.28-6 [237 kB]
+Get:18 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpulse0 armhf 12.2-4+deb10u1 [245 kB]
+Get:19 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcaca0 armhf 0.99.beta19-2.1 [334 kB]
+Get:20 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxv1 armhf 2:1.0.11-1 [23.2 kB]
+Get:21 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf gpac-modules-base armhf 0.5.2-426-gc5ad4e4+dfsg5-5 [200 kB]
+Get:22 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libraw1394-11 armhf 2.1.2-1+b1 [43.3 kB]
+Get:23 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libavc1394-0 armhf 0.5.4-5 [18.1 kB]
+Get:24 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libass9 armhf 1:0.14.0-2 [79.4 kB]
+Get:25 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libbs2b0 armhf 3.1.0+dfsg-2.2 [11.0 kB]
+Get:26 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libflite1 armhf 2.1-release-3 [12.4 MB]
+Get:27 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libserd-0-0 armhf 0.28.0~dfsg0-1 [36.2 kB]
+Get:28 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsord-0-0 armhf 0.16.0~dfsg0-1+b1 [19.3 kB]
+Get:29 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsratom-0-0 armhf 0.6.0~dfsg0-1 [14.9 kB]
+Get:30 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf liblilv-0-0 armhf 0.24.2~dfsg0-2 [36.8 kB]
+Get:31 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libmysofa0 armhf 0.6~dfsg0-3+deb10u1 [34.2 kB]
+Get:32 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libfftw3-double3 armhf 3.3.8-2 [429 kB]
+Get:33 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf librubberband2 armhf 1.8.1-7 [73.9 kB]
+Get:34 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libvidstab1.1 armhf 1.1.0-2 [30.3 kB]
+Get:35 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libnorm1 armhf 1.5.8+dfsg2-1 [239 kB]
+Get:36 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libpgm-5.2-0 armhf 5.2.122~dfsg-3 [153 kB]
+Get:37 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsodium23 armhf 1.0.17-1 [139 kB]
+Get:38 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libzmq5 armhf 4.3.1-4+deb10u1 [201 kB]
+Get:39 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcdio18 armhf 2.0.0-2 [191 kB]
+Get:40 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcdio-cdda2 armhf 10.2+0.94+2-4 [23.9 kB]
+Get:41 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libcdio-paranoia2 armhf 10.2+0.94+2-4 [25.5 kB]
+Get:42 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libdc1394-22 armhf 2.2.5-1 [97.6 kB]
+Get:43 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libiec61883-0 armhf 1.2.0-3 [29.4 kB]
+Get:44 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopenal-data all 1:1.19.1-1 [170 kB]
+Get:45 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libsndio7.0 armhf 1.5.0-3 [22.0 kB]
+Get:46 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libopenal1 armhf 1:1.19.1-1 [478 kB]
+Get:47 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxss1 armhf 1:1.2.3-1 [17.3 kB]
+Get:48 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf libxcb-shape0 armhf 1.13.1-2 [99.5 kB]
+Get:49 http://raspbian.mirror.uk.sargasso.net/raspbian buster/main armhf gpac armhf 0.5.2-426-gc5ad4e4+dfsg5-5 [262 kB]
+Fetched 20.8 MB in 8s (2481 kB/s)
+Selecting previously unselected package libglu1-mesa:armhf.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 49387 files and directories currently installed.)
+Preparing to unpack .../00-libglu1-mesa_9.0.0-2.1_armhf.deb ...
+Unpacking libglu1-mesa:armhf (9.0.0-2.1) ...
+Selecting previously unselected package libgpac4:armhf.
+Preparing to unpack .../01-libgpac4_0.5.2-426-gc5ad4e4+dfsg5-5_armhf.deb ...
+Unpacking libgpac4:armhf (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Selecting previously unselected package liba52-0.7.4:armhf.
+Preparing to unpack .../02-liba52-0.7.4_0.7.4-19_armhf.deb ...
+Unpacking liba52-0.7.4:armhf (0.7.4-19) ...
+Selecting previously unselected package libfaad2:armhf.
+Preparing to unpack .../03-libfaad2_2.8.8-3_armhf.deb ...
+Unpacking libfaad2:armhf (2.8.8-3) ...
+Selecting previously unselected package libfreenect0.5:armhf.
+Preparing to unpack .../04-libfreenect0.5_1%3a0.5.3-1_armhf.deb ...
+Unpacking libfreenect0.5:armhf (1:0.5.3-1) ...
+Selecting previously unselected package libjack-jackd2-0:armhf.
+Preparing to unpack .../05-libjack-jackd2-0_1.9.12~dfsg-2_armhf.deb ...
+Unpacking libjack-jackd2-0:armhf (1.9.12~dfsg-2) ...
+Selecting previously unselected package libmad0:armhf.
+Preparing to unpack .../06-libmad0_0.15.1b-10_armhf.deb ...
+Unpacking libmad0:armhf (0.15.1b-10) ...
+Selecting previously unselected package libasyncns0:armhf.
+Preparing to unpack .../07-libasyncns0_0.8-6_armhf.deb ...
+Unpacking libasyncns0:armhf (0.8-6) ...
+Selecting previously unselected package libice6:armhf.
+Preparing to unpack .../08-libice6_2%3a1.0.9-2_armhf.deb ...
+Unpacking libice6:armhf (2:1.0.9-2) ...
+Selecting previously unselected package libsm6:armhf.
+Preparing to unpack .../09-libsm6_2%3a1.2.3-1_armhf.deb ...
+Unpacking libsm6:armhf (2:1.2.3-1) ...
+Selecting previously unselected package libflac8:armhf.
+Preparing to unpack .../10-libflac8_1.3.2-3_armhf.deb ...
+Unpacking libflac8:armhf (1.3.2-3) ...
+Selecting previously unselected package libsndfile1:armhf.
+Preparing to unpack .../11-libsndfile1_1.0.28-6_armhf.deb ...
+Unpacking libsndfile1:armhf (1.0.28-6) ...
+Selecting previously unselected package libpulse0:armhf.
+Preparing to unpack .../12-libpulse0_12.2-4+deb10u1_armhf.deb ...
+Unpacking libpulse0:armhf (12.2-4+deb10u1) ...
+Selecting previously unselected package libcaca0:armhf.
+Preparing to unpack .../13-libcaca0_0.99.beta19-2.1_armhf.deb ...
+Unpacking libcaca0:armhf (0.99.beta19-2.1) ...
+Selecting previously unselected package libsdl1.2debian:armhf.
+Preparing to unpack .../14-libsdl1.2debian_1.2.15+dfsg2-4+rpt2_armhf.deb ...
+Unpacking libsdl1.2debian:armhf (1.2.15+dfsg2-4+rpt2) ...
+Selecting previously unselected package libxv1:armhf.
+Preparing to unpack .../15-libxv1_2%3a1.0.11-1_armhf.deb ...
+Unpacking libxv1:armhf (2:1.0.11-1) ...
+Selecting previously unselected package gpac-modules-base:armhf.
+Preparing to unpack .../16-gpac-modules-base_0.5.2-426-gc5ad4e4+dfsg5-5_armhf.deb ...
+Unpacking gpac-modules-base:armhf (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Selecting previously unselected package libraw1394-11:armhf.
+Preparing to unpack .../17-libraw1394-11_2.1.2-1+b1_armhf.deb ...
+Unpacking libraw1394-11:armhf (2.1.2-1+b1) ...
+Selecting previously unselected package libavc1394-0:armhf.
+Preparing to unpack .../18-libavc1394-0_0.5.4-5_armhf.deb ...
+Unpacking libavc1394-0:armhf (0.5.4-5) ...
+Selecting previously unselected package libass9:armhf.
+Preparing to unpack .../19-libass9_1%3a0.14.0-2_armhf.deb ...
+Unpacking libass9:armhf (1:0.14.0-2) ...
+Selecting previously unselected package libbs2b0:armhf.
+Preparing to unpack .../20-libbs2b0_3.1.0+dfsg-2.2_armhf.deb ...
+Unpacking libbs2b0:armhf (3.1.0+dfsg-2.2) ...
+Selecting previously unselected package libflite1:armhf.
+Preparing to unpack .../21-libflite1_2.1-release-3_armhf.deb ...
+Unpacking libflite1:armhf (2.1-release-3) ...
+Selecting previously unselected package libserd-0-0:armhf.
+Preparing to unpack .../22-libserd-0-0_0.28.0~dfsg0-1_armhf.deb ...
+Unpacking libserd-0-0:armhf (0.28.0~dfsg0-1) ...
+Selecting previously unselected package libsord-0-0:armhf.
+Preparing to unpack .../23-libsord-0-0_0.16.0~dfsg0-1+b1_armhf.deb ...
+Unpacking libsord-0-0:armhf (0.16.0~dfsg0-1+b1) ...
+Selecting previously unselected package libsratom-0-0:armhf.
+Preparing to unpack .../24-libsratom-0-0_0.6.0~dfsg0-1_armhf.deb ...
+Unpacking libsratom-0-0:armhf (0.6.0~dfsg0-1) ...
+Selecting previously unselected package liblilv-0-0:armhf.
+Preparing to unpack .../25-liblilv-0-0_0.24.2~dfsg0-2_armhf.deb ...
+Unpacking liblilv-0-0:armhf (0.24.2~dfsg0-2) ...
+Selecting previously unselected package libmysofa0:armhf.
+Preparing to unpack .../26-libmysofa0_0.6~dfsg0-3+deb10u1_armhf.deb ...
+Unpacking libmysofa0:armhf (0.6~dfsg0-3+deb10u1) ...
+Selecting previously unselected package libpostproc55:armhf.
+Preparing to unpack .../27-libpostproc55_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libpostproc55:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libfftw3-double3:armhf.
+Preparing to unpack .../28-libfftw3-double3_3.3.8-2_armhf.deb ...
+Unpacking libfftw3-double3:armhf (3.3.8-2) ...
+Selecting previously unselected package librubberband2:armhf.
+Preparing to unpack .../29-librubberband2_1.8.1-7_armhf.deb ...
+Unpacking librubberband2:armhf (1.8.1-7) ...
+Selecting previously unselected package libvidstab1.1:armhf.
+Preparing to unpack .../30-libvidstab1.1_1.1.0-2_armhf.deb ...
+Unpacking libvidstab1.1:armhf (1.1.0-2) ...
+Selecting previously unselected package libnorm1:armhf.
+Preparing to unpack .../31-libnorm1_1.5.8+dfsg2-1_armhf.deb ...
+Unpacking libnorm1:armhf (1.5.8+dfsg2-1) ...
+Selecting previously unselected package libpgm-5.2-0:armhf.
+Preparing to unpack .../32-libpgm-5.2-0_5.2.122~dfsg-3_armhf.deb ...
+Unpacking libpgm-5.2-0:armhf (5.2.122~dfsg-3) ...
+Selecting previously unselected package libsodium23:armhf.
+Preparing to unpack .../33-libsodium23_1.0.17-1_armhf.deb ...
+Unpacking libsodium23:armhf (1.0.17-1) ...
+Selecting previously unselected package libzmq5:armhf.
+Preparing to unpack .../34-libzmq5_4.3.1-4+deb10u1_armhf.deb ...
+Unpacking libzmq5:armhf (4.3.1-4+deb10u1) ...
+Selecting previously unselected package libavfilter7:armhf.
+Preparing to unpack .../35-libavfilter7_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libavfilter7:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package libcdio18:armhf.
+Preparing to unpack .../36-libcdio18_2.0.0-2_armhf.deb ...
+Unpacking libcdio18:armhf (2.0.0-2) ...
+Selecting previously unselected package libcdio-cdda2:armhf.
+Preparing to unpack .../37-libcdio-cdda2_10.2+0.94+2-4_armhf.deb ...
+Unpacking libcdio-cdda2:armhf (10.2+0.94+2-4) ...
+Selecting previously unselected package libcdio-paranoia2:armhf.
+Preparing to unpack .../38-libcdio-paranoia2_10.2+0.94+2-4_armhf.deb ...
+Unpacking libcdio-paranoia2:armhf (10.2+0.94+2-4) ...
+Selecting previously unselected package libdc1394-22:armhf.
+Preparing to unpack .../39-libdc1394-22_2.2.5-1_armhf.deb ...
+Unpacking libdc1394-22:armhf (2.2.5-1) ...
+Selecting previously unselected package libiec61883-0:armhf.
+Preparing to unpack .../40-libiec61883-0_1.2.0-3_armhf.deb ...
+Unpacking libiec61883-0:armhf (1.2.0-3) ...
+Selecting previously unselected package libopenal-data.
+Preparing to unpack .../41-libopenal-data_1%3a1.19.1-1_all.deb ...
+Unpacking libopenal-data (1:1.19.1-1) ...
+Selecting previously unselected package libsndio7.0:armhf.
+Preparing to unpack .../42-libsndio7.0_1.5.0-3_armhf.deb ...
+Unpacking libsndio7.0:armhf (1.5.0-3) ...
+Selecting previously unselected package libopenal1:armhf.
+Preparing to unpack .../43-libopenal1_1%3a1.19.1-1_armhf.deb ...
+Unpacking libopenal1:armhf (1:1.19.1-1) ...
+Selecting previously unselected package libxss1:armhf.
+Preparing to unpack .../44-libxss1_1%3a1.2.3-1_armhf.deb ...
+Unpacking libxss1:armhf (1:1.2.3-1) ...
+Selecting previously unselected package libsdl2-2.0-0:armhf.
+Preparing to unpack .../45-libsdl2-2.0-0_2.0.9+dfsg1-1+rpt1_armhf.deb ...
+Unpacking libsdl2-2.0-0:armhf (2.0.9+dfsg1-1+rpt1) ...
+Selecting previously unselected package libxcb-shape0:armhf.
+Preparing to unpack .../46-libxcb-shape0_1.13.1-2_armhf.deb ...
+Unpacking libxcb-shape0:armhf (1.13.1-2) ...
+Selecting previously unselected package libavdevice58:armhf.
+Preparing to unpack .../47-libavdevice58_7%3a4.1.4-1+rpt7~deb10u1_armhf.deb ...
+Unpacking libavdevice58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Selecting previously unselected package gpac.
+Preparing to unpack .../48-gpac_0.5.2-426-gc5ad4e4+dfsg5-5_armhf.deb ...
+Unpacking gpac (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Setting up libice6:armhf (2:1.0.9-2) ...
+Setting up libraw1394-11:armhf (2.1.2-1+b1) ...
+Setting up libsodium23:armhf (1.0.17-1) ...
+Setting up libfreenect0.5:armhf (1:0.5.3-1) ...
+Setting up libcaca0:armhf (0.99.beta19-2.1) ...
+Setting up libnorm1:armhf (1.5.8+dfsg2-1) ...
+Setting up libxcb-shape0:armhf (1.13.1-2) ...
+Setting up libdc1394-22:armhf (2.2.5-1) ...
+Setting up libcdio18:armhf (2.0.0-2) ...
+Setting up libmysofa0:armhf (0.6~dfsg0-3+deb10u1) ...
+Setting up libflac8:armhf (1.3.2-3) ...
+Setting up liba52-0.7.4:armhf (0.7.4-19) ...
+Setting up libass9:armhf (1:0.14.0-2) ...
+Setting up libfaad2:armhf (2.8.8-3) ...
+Setting up libxv1:armhf (2:1.0.11-1) ...
+Setting up libpostproc55:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up libfftw3-double3:armhf (3.3.8-2) ...
+Setting up librubberband2:armhf (1.8.1-7) ...
+Setting up libsndio7.0:armhf (1.5.0-3) ...
+Setting up libjack-jackd2-0:armhf (1.9.12~dfsg-2) ...
+Setting up libvidstab1.1:armhf (1.1.0-2) ...
+Setting up libmad0:armhf (0.15.1b-10) ...
+Setting up libflite1:armhf (2.1-release-3) ...
+Setting up libasyncns0:armhf (0.8-6) ...
+Setting up libbs2b0:armhf (3.1.0+dfsg-2.2) ...
+Setting up libopenal-data (1:1.19.1-1) ...
+Setting up libglu1-mesa:armhf (9.0.0-2.1) ...
+Setting up libxss1:armhf (1:1.2.3-1) ...
+Setting up libsndfile1:armhf (1.0.28-6) ...
+Setting up libsm6:armhf (2:1.2.3-1) ...
+Setting up libgpac4:armhf (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Setting up libpgm-5.2-0:armhf (5.2.122~dfsg-3) ...
+Setting up libiec61883-0:armhf (1.2.0-3) ...
+Setting up libserd-0-0:armhf (0.28.0~dfsg0-1) ...
+Setting up libavc1394-0:armhf (0.5.4-5) ...
+Setting up libzmq5:armhf (4.3.1-4+deb10u1) ...
+Setting up libpulse0:armhf (12.2-4+deb10u1) ...
+Setting up libcdio-cdda2:armhf (10.2+0.94+2-4) ...
+Setting up libcdio-paranoia2:armhf (10.2+0.94+2-4) ...
+Setting up libopenal1:armhf (1:1.19.1-1) ...
+Setting up libsdl1.2debian:armhf (1.2.15+dfsg2-4+rpt2) ...
+Setting up libsord-0-0:armhf (0.16.0~dfsg0-1+b1) ...
+Setting up libsratom-0-0:armhf (0.6.0~dfsg0-1) ...
+Setting up gpac-modules-base:armhf (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Setting up libsdl2-2.0-0:armhf (2.0.9+dfsg1-1+rpt1) ...
+Setting up liblilv-0-0:armhf (0.24.2~dfsg0-2) ...
+Setting up libavfilter7:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up libavdevice58:armhf (7:4.1.4-1+rpt7~deb10u1) ...
+Setting up gpac (0.5.2-426-gc5ad4e4+dfsg5-5) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
++ wget https://bootstrap.pypa.io/get-pip.py
+--2020-05-05 13:48:51--  https://bootstrap.pypa.io/get-pip.py
+Resolving bootstrap.pypa.io (bootstrap.pypa.io)... 151.101.0.175, 151.101.64.175, 151.101.128.175, ...
+Connecting to bootstrap.pypa.io (bootstrap.pypa.io)|151.101.0.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1868059 (1.8M) [text/x-python]
+Saving to: 'get-pip.py'
+
+     0K .......... .......... .......... .......... ..........  2%  877K 2s
+    50K .......... .......... .......... .......... ..........  5% 2.33M 1s
+   100K .......... .......... .......... .......... ..........  8% 3.74M 1s
+   150K .......... .......... .......... .......... .......... 10% 3.55M 1s
+   200K .......... .......... .......... .......... .......... 13% 3.63M 1s
+   250K .......... .......... .......... .......... .......... 16% 3.10M 1s
+   300K .......... .......... .......... .......... .......... 19% 3.33M 1s
+   350K .......... .......... .......... .......... .......... 21% 2.62M 1s
+   400K .......... .......... .......... .......... .......... 24% 1.62M 1s
+   450K .......... .......... .......... .......... .......... 27% 1.69M 1s
+   500K .......... .......... .......... .......... .......... 30% 1.68M 1s
+   550K .......... .......... .......... .......... .......... 32% 2.81M 1s
+   600K .......... .......... .......... .......... .......... 35% 3.48M 1s
+   650K .......... .......... .......... .......... .......... 38% 3.46M 0s
+   700K .......... .......... .......... .......... .......... 41% 4.87M 0s
+   750K .......... .......... .......... .......... .......... 43% 7.63M 0s
+   800K .......... .......... .......... .......... .......... 46% 7.59M 0s
+   850K .......... .......... .......... .......... .......... 49% 7.69M 0s
+   900K .......... .......... .......... .......... .......... 52% 6.93M 0s
+   950K .......... .......... .......... .......... .......... 54% 7.97M 0s
+  1000K .......... .......... .......... .......... .......... 57% 8.01M 0s
+  1050K .......... .......... .......... .......... .......... 60% 8.10M 0s
+  1100K .......... .......... .......... .......... .......... 63% 7.01M 0s
+  1150K .......... .......... .......... .......... .......... 65% 8.02M 0s
+  1200K .......... .......... .......... .......... .......... 68% 8.31M 0s
+  1250K .......... .......... .......... .......... .......... 71% 6.69M 0s
+  1300K .......... .......... .......... .......... .......... 74% 3.87M 0s
+  1350K .......... .......... .......... .......... .......... 76% 3.83M 0s
+  1400K .......... .......... .......... .......... .......... 79% 4.09M 0s
+  1450K .......... .......... .......... .......... .......... 82% 3.14M 0s
+  1500K .......... .......... .......... .......... .......... 84% 4.04M 0s
+  1550K .......... .......... .......... .......... .......... 87% 4.20M 0s
+  1600K .......... .......... .......... .......... .......... 90% 4.15M 0s
+  1650K .......... .......... .......... .......... .......... 93% 4.02M 0s
+  1700K .......... .......... .......... .......... .......... 95% 4.13M 0s
+  1750K .......... .......... .......... .......... .......... 98% 4.00M 0s
+  1800K .......... .......... ....                            100% 5.16M=0.5s
+
+2020-05-05 13:48:51 (3.49 MB/s) - 'get-pip.py' saved [1868059/1868059]
+
++ python3 get-pip.py
+Collecting pip
+  Downloading pip-20.1-py2.py3-none-any.whl (1.5 MB)
+Collecting setuptools
+  Downloading setuptools-46.1.3-py3-none-any.whl (582 kB)
+Collecting wheel
+  Downloading wheel-0.34.2-py2.py3-none-any.whl (26 kB)
+Installing collected packages: pip, setuptools, wheel
+Successfully installed pip-20.1 setuptools-46.1.3 wheel-0.34.2
++ rm -rf /root/.cache/pip
++ pip3 install --upgrade pip
+Requirement already up-to-date: pip in /usr/local/lib/python3.7/dist-packages (20.1)
++ echo '[global]'
++ echo extra-index-url=https://www.piwheels.org/simple
++ echo 'Installing OpenCV'
+Installing OpenCV
++ pip3 install opencv-python-headless
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting opencv-python-headless
+  Downloading https://www.piwheels.org/simple/opencv-python-headless/opencv_python_headless-4.1.1.26-cp37-cp37m-linux_armv7l.whl (10.0 MB)
+Collecting numpy>=1.16.2
+  Downloading https://www.piwheels.org/simple/numpy/numpy-1.18.4-cp37-cp37m-linux_armv7l.whl (10.4 MB)
+Installing collected packages: numpy, opencv-python-headless
+Successfully installed numpy-1.18.4 opencv-python-headless-4.1.1.26
++ echo 'Checking out repo'
+Checking out repo
++ git clone https://github.com/interactionresearchstudio/NaturewatchCameraServer.git
+Cloning into 'NaturewatchCameraServer'...
++ pushd NaturewatchCameraServer
+/NaturewatchCameraServer /
++ echo 'Installing repo dependencies'
+Installing repo dependencies
++ pip3 install -r requirements-pi.txt
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting atomicwrites==1.3.0
+  Downloading atomicwrites-1.3.0-py2.py3-none-any.whl (5.9 kB)
+Collecting attrs==19.1.0
+  Downloading attrs-19.1.0-py2.py3-none-any.whl (35 kB)
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Collecting imutils==0.5.2
+  Downloading https://www.piwheels.org/simple/imutils/imutils-0.5.2-py3-none-any.whl (24 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.1
+  Downloading Jinja2-2.10.1-py2.py3-none-any.whl (124 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading https://www.piwheels.org/simple/markupsafe/MarkupSafe-1.1.1-cp37-cp37m-linux_armv7l.whl (33 kB)
+Collecting more-itertools==7.0.0
+  Downloading more_itertools-7.0.0-py3-none-any.whl (53 kB)
+Collecting pluggy==0.11.0
+  Downloading pluggy-0.11.0-py2.py3-none-any.whl (17 kB)
+Collecting py==1.8.0
+  Downloading py-1.8.0-py2.py3-none-any.whl (83 kB)
+Collecting pytest==4.5.0
+  Downloading pytest-4.5.0-py2.py3-none-any.whl (227 kB)
+Requirement already satisfied: six==1.12.0 in /usr/lib/python3/dist-packages (from -r requirements.txt (line 13)) (1.12.0)
+Collecting wcwidth==0.1.7
+  Downloading wcwidth-0.1.7-py2.py3-none-any.whl (21 kB)
+Collecting Werkzeug==0.15.3
+  Downloading Werkzeug-0.15.3-py2.py3-none-any.whl (327 kB)
+Collecting picamera>=1.13
+  Downloading https://www.piwheels.org/simple/picamera/picamera-1.13-py3-none-any.whl (154 kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.7/dist-packages (from pytest==4.5.0->-r requirements.txt (line 12)) (46.1.3)
+Installing collected packages: atomicwrites, attrs, Click, Werkzeug, itsdangerous, MarkupSafe, Jinja2, Flask, imutils, more-itertools, pluggy, py, wcwidth, pytest, picamera
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.1 MarkupSafe-1.1.1 Werkzeug-0.15.3 atomicwrites-1.3.0 attrs-19.1.0 imutils-0.5.2 itsdangerous-1.1.0 more-itertools-7.0.0 picamera-1.13 pluggy-0.11.0 py-1.8.0 pytest-4.5.0 wcwidth-0.1.7
++ popd
+/
++ rm get-pip.py
++ unpack /filesystem/home/pi /home/pi pi
++ from=/filesystem/home/pi
++ to=/home/pi
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=pi
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/home/pi/. /tmp/unpack/
+'/filesystem/home/pi/./README' -> '/tmp/unpack/./README'
++ '[' -n pi ']'
++ chown -hR pi:pi /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /home/pi
+'/tmp/unpack/./README' -> '/home/pi/./README'
++ rm -r /tmp/unpack
++ unpack /filesystem/root /
++ from=/filesystem/root
++ to=/
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/root/. /tmp/unpack/
+'/filesystem/root/./README' -> '/tmp/unpack/./README'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./README' -> '/./README'
++ rm -r /tmp/unpack
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/boot/README'
+removed directory 'filesystem/boot'
+removed 'filesystem/root/README'
+removed directory 'filesystem/root'
+removed 'filesystem/home/root/README'
+removed directory 'filesystem/home/root'
+removed 'filesystem/home/pi/README'
+removed directory 'filesystem/home/pi'
+removed directory 'filesystem/home'
+removed directory 'filesystem'
++ execute_chroot_script /distro/modules/naturewatchcamera /distro/modules/naturewatchcamera/end_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /distro/modules/naturewatchcamera/filesystem ']'
++ cp -vr --preserve=mode,timestamps /distro/modules/naturewatchcamera/filesystem .
+'/distro/modules/naturewatchcamera/filesystem' -> './filesystem'
+'/distro/modules/naturewatchcamera/filesystem/boot' -> './filesystem/boot'
+'/distro/modules/naturewatchcamera/filesystem/boot/README' -> './filesystem/boot/README'
+'/distro/modules/naturewatchcamera/filesystem/home' -> './filesystem/home'
+'/distro/modules/naturewatchcamera/filesystem/home/pi' -> './filesystem/home/pi'
+'/distro/modules/naturewatchcamera/filesystem/home/pi/README' -> './filesystem/home/pi/README'
+'/distro/modules/naturewatchcamera/filesystem/home/root' -> './filesystem/home/root'
+'/distro/modules/naturewatchcamera/filesystem/home/root/README' -> './filesystem/home/root/README'
+'/distro/modules/naturewatchcamera/filesystem/root' -> './filesystem/root'
+'/distro/modules/naturewatchcamera/filesystem/root/README' -> './filesystem/root/README'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /distro/modules/naturewatchcamera/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ set -e
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/boot/README'
+removed directory 'filesystem/boot'
+removed 'filesystem/root/README'
+removed directory 'filesystem/root'
+removed 'filesystem/home/root/README'
+removed directory 'filesystem/home/root'
+removed 'filesystem/home/pi/README'
+removed directory 'filesystem/home/pi'
+removed directory 'filesystem/home'
+removed directory 'filesystem'
++ execute_chroot_script /CustomPiOS/modules/disable-services /CustomPiOS/modules/disable-services/end_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/disable-services/filesystem ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/disable-services/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ rm -r /usr/sbin/policy-rc.d
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ execute_chroot_script /CustomPiOS/modules/base /CustomPiOS/modules/base/end_chroot_script
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ '[' -d /CustomPiOS/modules/base/filesystem ']'
++ cp -vr --preserve=mode,timestamps /CustomPiOS/modules/base/filesystem .
+'/CustomPiOS/modules/base/filesystem' -> './filesystem'
+'/CustomPiOS/modules/base/filesystem/ubuntu' -> './filesystem/ubuntu'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr' -> './filesystem/ubuntu/usr'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib' -> './filesystem/ubuntu/usr/lib'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd' -> './filesystem/ubuntu/usr/lib/dhcpcd'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+'/CustomPiOS/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ cp /CustomPiOS/modules/base/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /CustomPiOS/common.sh common.sh
++ chmod 755 common.sh
++ '[' -f /.dockerenv ']'
+++ arch
++ '[' armv7l '!=' armv7l ']'
++ echo 'Building on ARM device a armv7l/aarch64/arm64 system, not using qemu'
+Building on ARM device a armv7l/aarch64/arm64 system, not using qemu
++ chroot . /bin/bash /chroot_script
++ '[' -n '' ']'
++ '[' -n '' ']'
++ '[' -f /etc/hostname ']'
++ read FILE_HOST_NAME
++ FILE_HOST_NAME=raspberrypi
++ echo mynaturewatchcamera
++ sed -i -e s@raspberrypi@mynaturewatchcamera@g /etc/hosts
++ '[' raspbian == ubuntu ']'
++ apt-get clean
++ apt-get autoremove -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd'
+removed directory 'filesystem/ubuntu/usr/lib'
+removed directory 'filesystem/ubuntu/usr'
+removed directory 'filesystem/ubuntu'
+removed directory 'filesystem'
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ '[' yes == yes ']'
++++ restoreLd
++++ '[' -f etc/ld.so.preload ']'
++++ sed -i 's@\#/usr/lib/arm-linux-gnueabihf/libcofi_rpi.so@/usr/lib/arm-linux-gnueabihf/libcofi_rpi.so@' etc/ld.so.preload
++++ sed -i 's@\#/usr/lib/arm-linux-gnueabihf/libarmmem.so@/usr/lib/arm-linux-gnueabihf/libarmmem.so@' etc/ld.so.preload
++++ sed -i 's@#/usr/lib/arm-linux-gnueabihf/libarmmem-${PLATFORM}.so@/usr/lib/arm-linux-gnueabihf/libarmmem-${PLATFORM}.so@' etc/ld.so.preload
++++ popd
+/distro/workspace /distro
++++ unmount_image /distro/workspace/mount
++++ mount_path=/distro/workspace/mount
++++ force=
++++ '[' 1 -gt 1 ']'
++++ '[' -n '' ']'
+++++ sudo mount
+++++ grep /distro/workspace/mount
+++++ awk -F ' on ' '{print $2}'
+++++ sort -r
+++++ awk '{print $1}'
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo 'Unmounting /distro/workspace/mount/var/cache/apt...'
+Unmounting /distro/workspace/mount/var/cache/apt...
++++ sudo umount /distro/workspace/mount/var/cache/apt
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo 'Unmounting /distro/workspace/mount/dev/pts...'
+Unmounting /distro/workspace/mount/dev/pts...
++++ sudo umount /distro/workspace/mount/dev/pts
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo 'Unmounting /distro/workspace/mount/dev...'
+Unmounting /distro/workspace/mount/dev...
++++ sudo umount /distro/workspace/mount/dev
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo 'Unmounting /distro/workspace/mount/boot...'
+Unmounting /distro/workspace/mount/boot...
++++ sudo umount /distro/workspace/mount/boot
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo 'Unmounting /distro/workspace/mount...'
+Unmounting /distro/workspace/mount...
++++ sudo umount /distro/workspace/mount
++++ chmod 777 2020-02-13-raspbian-buster-lite.img
++++ '[' -n 200 ']'
++++ minimize_ext 2020-02-13-raspbian-buster-lite.img 2 200
++++ image=2020-02-13-raspbian-buster-lite.img
++++ partition=2
++++ buffer=200
++++ echo 'Resizing partition 2 on 2020-02-13-raspbian-buster-lite.img to minimal size + 200 MB'
+Resizing partition 2 on 2020-02-13-raspbian-buster-lite.img to minimal size + 200 MB
+++++ sfdisk -d 2020-02-13-raspbian-buster-lite.img
+++++ grep 2020-02-13-raspbian-buster-lite.img2
++++ partitioninfo='2020-02-13-raspbian-buster-lite.img2 : start=      532480, size=     5537792, type=83'
+++++ awk '{print $4-0}'
+++++ echo 2020-02-13-raspbian-buster-lite.img2 : start= 532480, size= 5537792, type=83
++++ start=532480
+++++ echo 2020-02-13-raspbian-buster-lite.img2 : start= 532480, size= 5537792, type=83
+++++ awk '{print $6-0}'
++++ e2fsize_blocks=5537792
++++ offset=272629760
++++ detach_all_loopback 2020-02-13-raspbian-buster-lite.img
+++++ losetup
+++++ grep 2020-02-13-raspbian-buster-lite.img
+++++ awk '{ print $1 }'
++++ test_for_image 2020-02-13-raspbian-buster-lite.img
++++ '[' '!' -f 2020-02-13-raspbian-buster-lite.img ']'
+++++ losetup -f --show -o 272629760 2020-02-13-raspbian-buster-lite.img
++++ LODEV=/dev/loop0
++++ trap 'losetup -d $LODEV' EXIT
++++ e2fsck -fy /dev/loop0
+e2fsck 1.44.5 (15-Dec-2018)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+rootfs: 58750/176704 files (0.2% non-contiguous), 441577/692224 blocks
+++++ tune2fs -l /dev/loop0
+++++ grep -i 'block size'
+++++ awk -F: '{print $2-0}'
++++ e2fblocksize=4096
+++++ resize2fs -P /dev/loop0
+++++ grep -i 'minimum size'
+++++ awk -F: '{print $2-0}'
++++ e2fminsize=607070
++++ e2fminsize_bytes=2486558720
++++ e2ftarget_bytes=2696273920
++++ e2fsize_bytes=2835348992
++++ e2fminsize_mb=2371
++++ e2fminsize_blocks=4856561
++++ e2ftarget_mb=2571
++++ e2ftarget_blocks=5266161
++++ e2fsize_mb=2703
++++ size_offset_mb=132
++++ losetup -d /dev/loop0
++++ echo 'Actual size is 2703 MB (5537792 blocks), Minimum size is 2371 MB (607070 file system blocks, 4856561 blocks)'
+Actual size is 2703 MB (5537792 blocks), Minimum size is 2371 MB (607070 file system blocks, 4856561 blocks)
++++ echo 'Resizing to 2571 MB (5266161 blocks)'
+Resizing to 2571 MB (5266161 blocks)
++++ '[' 132 -gt 0 ']'
++++ echo 'Partition size is bigger then the desired size, shrinking'
+Partition size is bigger then the desired size, shrinking
++++ shrink_ext 2020-02-13-raspbian-buster-lite.img 2 2570
++++ image=2020-02-13-raspbian-buster-lite.img
++++ partition=2
++++ size=2570
++++ echo 'Resizing file system to 2570 MB...'
+Resizing file system to 2570 MB...
+++++ sfdisk -d 2020-02-13-raspbian-buster-lite.img
+++++ grep 2020-02-13-raspbian-buster-lite.img2
+++++ awk '{print $4-0}'
++++ start=532480
++++ offset=272629760
++++ detach_all_loopback 2020-02-13-raspbian-buster-lite.img
+++++ losetup
+++++ grep 2020-02-13-raspbian-buster-lite.img
+++++ awk '{ print $1 }'
++++ test_for_image 2020-02-13-raspbian-buster-lite.img
++++ '[' '!' -f 2020-02-13-raspbian-buster-lite.img ']'
+++++ losetup -f --show -o 272629760 2020-02-13-raspbian-buster-lite.img
++++ LODEV=/dev/loop0
++++ trap 'losetup -d $LODEV' EXIT
++++ e2fsck -fy /dev/loop0
+e2fsck 1.44.5 (15-Dec-2018)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+rootfs: 58750/176704 files (0.2% non-contiguous), 441577/692224 blocks
++++ e2ftarget_bytes=2694840320
++++ e2ftarget_blocks=5263361
++++ echo 'Resizing file system to 5263361 blocks...'
+Resizing file system to 5263361 blocks...
++++ resize2fs /dev/loop0 5263361s
+resize2fs 1.44.5 (15-Dec-2018)
+Resizing the filesystem on /dev/loop0 to 657920 (4k) blocks.
+The filesystem on /dev/loop0 is now 657920 (4k) blocks long.
+
++++ losetup -d /dev/loop0
++++ trap - EXIT
++++ new_end=5795841
++++ echo 'Resizing partition to end at 532480 + 5263361 = 5795841 blocks...'
+Resizing partition to end at 532480 + 5263361 = 5795841 blocks...
++++ fdisk 2020-02-13-raspbian-buster-lite.img
+
+Welcome to fdisk (util-linux 2.33.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): Disk 2020-02-13-raspbian-buster-lite.img: 2.9 GiB, 3107979264 bytes, 6070272 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x738a4d67
+
+Device                               Boot  Start     End Sectors  Size Id Type
+2020-02-13-raspbian-buster-lite.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
+2020-02-13-raspbian-buster-lite.img2      532480 6070271 5537792  2.7G 83 Linux
+
+Command (m for help): Partition number (1,2, default 2): 
+Partition 2 has been deleted.
+
+Command (m for help): Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): Partition number (2-4, default 2): First sector (2048-6070271, default 2048): Last sector, +/-sectors or +/-size{K,M,G,T,P} (532480-6070271, default 6070271): 
+Created a new partition 2 of type 'Linux' and of size 2.5 GiB.
+Partition #2 contains a ext4 signature.
+
+Command (m for help): 
+Disk 2020-02-13-raspbian-buster-lite.img: 2.9 GiB, 3107979264 bytes, 6070272 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x738a4d67
+
+Device                               Boot  Start     End Sectors  Size Id Type
+2020-02-13-raspbian-buster-lite.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
+2020-02-13-raspbian-buster-lite.img2      532480 5795841 5263362  2.5G 83 Linux
+
+Command (m for help): The partition table has been altered.
+Syncing disks.
+
++++ new_size=2967471104
++++ echo 'Truncating image to 2967471104 bytes...'
+Truncating image to 2967471104 bytes...
++++ truncate --size=2967471104 2020-02-13-raspbian-buster-lite.img
++++ fdisk -l 2020-02-13-raspbian-buster-lite.img
+Disk 2020-02-13-raspbian-buster-lite.img: 2.8 GiB, 2967471104 bytes, 5795842 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x738a4d67
+
+Device                               Boot  Start     End Sectors  Size Id Type
+2020-02-13-raspbian-buster-lite.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
+2020-02-13-raspbian-buster-lite.img2      532480 5795841 5263362  2.5G 83 Linux
++++ echo 'Resizing filesystem ...'
+Resizing filesystem ...
++++ detach_all_loopback 2020-02-13-raspbian-buster-lite.img
+++++ losetup
+++++ grep 2020-02-13-raspbian-buster-lite.img
+++++ awk '{ print $1 }'
++++ test_for_image 2020-02-13-raspbian-buster-lite.img
++++ '[' '!' -f 2020-02-13-raspbian-buster-lite.img ']'
+++++ losetup -f --show -o 272629760 2020-02-13-raspbian-buster-lite.img
++++ LODEV=/dev/loop0
++++ trap 'losetup -d $LODEV' EXIT
++++ e2fsck -fy /dev/loop0
+e2fsck 1.44.5 (15-Dec-2018)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+rootfs: 58750/168672 files (0.2% non-contiguous), 441073/657920 blocks
++++ resize2fs -p /dev/loop0
+resize2fs 1.44.5 (15-Dec-2018)
+The filesystem is already 657920 (4k) blocks long.  Nothing to do!
+
++++ losetup -d /dev/loop0
++++ trap - EXIT
++++ popd
+/distro
++++ echo_green -e '\nBUILD SUCCEEDED!\n'
++++ echo -e -n '\e[92m'
+[92m+++ echo -e '\nBUILD' 'SUCCEEDED!\n'
+
+BUILD SUCCEEDED!
+
++++ echo -e -n '\e[0m'
+[0m

@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+    custompios:
+        image: guysoft/custompios:devel
+        container_name: mydistro-build
+        tty: true
+        restart: always
+        privileged: true
+        volumes:
+        - ./src/:/distro
+        devices:
+        - /dev/loop-control
+        environment:
+        - BASE_IMAGE_ENLARGEROOT=1200
+        - AUTO_HOTSPOT_NAME=MyNaturewatch
+        - AUTO_HOTSPOT_PASSWORD=badgersandfoxes

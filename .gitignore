@@ -1,0 +1,5 @@
+src/workspace/
+*.iso
+*.img
+*.zip
+*.log

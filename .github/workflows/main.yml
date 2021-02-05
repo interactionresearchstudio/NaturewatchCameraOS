@@ -37,6 +37,10 @@ jobs:
       run: cd repository/src && ../../CustomPiOS/src/update-custompios-paths
     - name: Build Image
       run: export BASE_IMAGE_ENLARGEROOT=1200 && export AUTO_HOTSPOT_NAME=MyNaturewatch && export AUTO_HOTSPOT_PASSWORD=badgersandfoxes && sudo modprobe loop && cd repository/src && sudo bash -x ./build_dist
+      env:
+        BASE_IMAGE_ENLARGEROOT: 1200
+        AUTO_HOTSPOT_NAME: MyNaturewatch
+        AUTO_HOTSPOT_PASSWORD: badgersandfoxes
     - name: Copy Output
       run: cp ${{ github.workspace }}/repository/src/workspace/*-raspbian-buster-lite.img build.img
     - name: Zip Output

@@ -1,7 +1,7 @@
 name: Build Image
 
 on:
-  pull_request: {}
+  commit: {}
   push:
     tags:
       - v*

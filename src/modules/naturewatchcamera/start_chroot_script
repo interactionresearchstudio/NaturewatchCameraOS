@@ -30,6 +30,8 @@ wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 rm -rf ~/.cache/pip
 pip3 install --upgrade pip
+echo "Printing PIP..."
+cat /etc/pip.conf
 echo "[global]" >> /etc/pip.conf
 echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 
@@ -55,7 +57,7 @@ echo "Enabling service"
 chmod 644 /etc/systemd/system/python.naturewatch.service
 systemctl enable python.naturewatch.service
 
-rm get-pip.py 
+rm get-pip.py
 
 unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 # Unpack root at the end, so files are modified before

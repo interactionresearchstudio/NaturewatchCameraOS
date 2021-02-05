@@ -1,7 +1,6 @@
 name: Build Image
 
 on:
-  commit: {}
   push:
     tags:
       - v*

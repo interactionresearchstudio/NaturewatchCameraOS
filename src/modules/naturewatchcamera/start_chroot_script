@@ -32,6 +32,7 @@ rm -rf ~/.cache/pip
 pip3 install --upgrade pip
 echo "Printing PIP..."
 cat /etc/pip.conf
+
 echo "[global]" >> /etc/pip.conf
 echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 

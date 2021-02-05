@@ -19,7 +19,7 @@ unpack /filesystem/boot /boot
 
 echo "-----------------------------------------"
 echo "$NATUREWATCHCAMERA_VAR"
-
+export TMPDIR='/var/tmp'
 apt-get update
 apt-get install -y git
 echo "Installing OpenCV dependencies"

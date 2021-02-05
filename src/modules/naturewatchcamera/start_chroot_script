@@ -32,9 +32,10 @@ rm -rf ~/.cache/pip
 pip3 install --upgrade pip
 #echo "[global]" >> /etc/pip.conf
 #echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
-
+sudo apt install libatlas3-base libgfortran5
+sudo pip3 install numpy
 echo "Installing OpenCV"
-pip3 install --no-cache-dir opencv-python-headless
+pip3 install opencv-python-headless
 
 pushd /home/pi
 	echo "Checking out repo"

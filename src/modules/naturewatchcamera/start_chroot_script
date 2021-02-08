@@ -19,7 +19,6 @@ unpack /filesystem/boot /boot
 
 echo "-----------------------------------------"
 echo "$NATUREWATCHCAMERA_VAR"
-export TMPDIR='/var/tmp'
 apt-get update
 apt-get install -y git
 echo "Installing OpenCV dependencies"
@@ -36,7 +35,7 @@ pip3 install cmake
 apt install libatlas3-base libgfortran5
 pip3 install --no-cache-dir numpy
 echo "Installing OpenCV"
-pip3 install opencv-python-headless
+pip3 install opencv-contrib-python==3.4.3.18
 
 pushd /home/pi
 	echo "Checking out repo"

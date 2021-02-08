@@ -34,7 +34,7 @@ pip3 install --upgrade pip setuptools wheel
 #echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 sudo apt install libatlas3-base libgfortran5
 sudo pip3 install --no-cache-dir numpy
-pip3 install cmake
+pip install cmake
 echo "Installing OpenCV"
 pip3 install opencv-python-headless
 

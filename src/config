@@ -4,3 +4,4 @@ export MODULES="base(network,disable-services(auto-hotspot,raspicam,naturewatchc
 export BASE_IMAGE_ENLARGEROOT=1200
 export AUTO_HOTSPOT_NAME=MyNaturewatch
 export AUTO_HOTSPOT_PASSWORD=badgersandfoxes
+export options loop max_loop=128

@@ -30,7 +30,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 rm -rf ~/.cache/pip
 pip3 install --upgrade pip setuptools wheel
-pip install cmake==3.13.3
+pip3 install cmake==3.15.3
 #echo "[global]" >> /etc/pip.conf
 #echo "extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 apt install libatlas3-base libgfortran5

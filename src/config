@@ -5,3 +5,4 @@ export BASE_IMAGE_ENLARGEROOT=1200
 export AUTO_HOTSPOT_NAME=MyNaturewatch
 export AUTO_HOTSPOT_PASSWORD=badgersandfoxes
 export options loop max_loop=128
+export ADMIN_TOOLKIT_UPDATE_PACKAGES=yes

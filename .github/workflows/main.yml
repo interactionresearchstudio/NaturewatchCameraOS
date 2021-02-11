@@ -42,7 +42,7 @@ jobs:
         AUTO_HOTSPOT_NAME: MyNaturewatch
         AUTO_HOTSPOT_PASSWORD: badgersandfoxes
     - name: Copy Output
-      run: cp ${{ github.workspace }}/repository/src/workspace/*-raspbian-lite-buster.img build.img
+      run: cp ${{ github.workspace }}/repository/src/workspace/*-raspbian-buster.img build.img
     - name: Zip Output
       run: gzip build.img
     - uses: actions/upload-artifact@v1

@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: 'guysoft/CustomPiOS'
-        branch: devel  
+        ref: devel  
         path: CustomPiOS
     - name: Checkout Project Repository
       uses: actions/checkout@v2

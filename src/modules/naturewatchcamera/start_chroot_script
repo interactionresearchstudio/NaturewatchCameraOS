@@ -62,8 +62,6 @@ echo "Enabling service"
 chmod 644 /etc/systemd/system/python.naturewatch.service
 systemctl enable python.naturewatch.service
 
-rm get-pip.py
-
 unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 # Unpack root at the end, so files are modified before
 unpack /filesystem/root /
